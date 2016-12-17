@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+.menuTextStyle{
+  text-align: center;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+}
+.imageStyle{
+  max-width: 23px !important;
+  max-height: 22px !important;
+}
+.beneficioSubMenuHeader{
+  padding-top: 10px;
+  margin-right: -40px !important;
+}
+.buttonRightStyle{
+  float: right;
+  margin-top: -5px;
+  width: 65px;
+}
