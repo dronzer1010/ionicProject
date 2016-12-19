@@ -73,6 +73,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.beneficiosDetailPage', {
+    url: '/beneficiosDetailPage',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/beneficiosDetailPage.html',
+        controller: 'beneficiosDetailController'
+      }
+    }
+  })
+
+  .state('app.formacionSubmenu', {
+    url: '/formacionSubmenu',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/formacionSubmenu.html',
+        controller: 'formacionSubmenuController'
+      }
+    }
+  })
+
   .state('app.training', {
     url: '/training',
     views: {

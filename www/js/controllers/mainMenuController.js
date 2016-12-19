@@ -4,5 +4,8 @@ angular.module('starter').controller('mainMenuController', function($scope, $sta
     $state.go('app.beneficiosSubmenu');
   };
 
+  $scope.goFormacionSubmenu = function () {
+    $state.go('app.formacionSubmenu');
+  };
 
 });
