@@ -1,4 +1,4 @@
-angular.module('starter').controller('loginController', function($scope, $state, $ionicModal, $timeout, IonicPopupService) {
+angular.module('starter').controller('loginController', function($scope, $state, $ionicModal, $timeout) {
 
   // Form data for the login modal
   $scope.loginData = {};
@@ -6,8 +6,10 @@ angular.module('starter').controller('loginController', function($scope, $state,
   // Perform the login action when the user submits the login form
   $scope.Login = function() {
     console.log('Login page calling');
-    IonicPopupService.alert("Success", "User Login Successfully.");
-    $state.go('app.mainMenu');
+    // IonicPopupService.alert("Success", "User Login Successfully.");
+    // $state.go('tab.beneficious');
+    $state.go('tab.induccion');
+
   };
   // Create the forgot password  modal that we will use later
   $ionicModal.fromTemplateUrl('templates/forgotPassword.html', {
@@ -24,6 +26,7 @@ $scope.hideBackButton = true;
   // Open the login modal
   $scope.forgotPassword = function() {
     $scope.modal.show();
+    $scope.$apply();
   };
 
   /////this code is for forgot password page:

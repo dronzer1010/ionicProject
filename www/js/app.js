@@ -3,14 +3,15 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
+// 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform, $location) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
+    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
 
@@ -21,98 +22,118 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
 })
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
+})
 
 .config(function($stateProvider, $urlRouterProvider) {
+
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
   $stateProvider
 
-    .state('app', {
-    url: '/app',
+  // setup an abstract state for the tabs directive
+    .state('tab', {
+    url: '/tab',
     abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    templateUrl: 'templates/tabs.html'
   })
 
+  // Each tab has its own nav history stack:
 
-  .state('app.login', {
-    url: '/login',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/login.html',
-        controller: 'loginController'
-      }
-    }
-  })
-  .state('app.welcome', {
-    url: '/welcome',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/welcome.html',
-        controller: 'welcomeController'
-      }
-    }
-  })
+  .state('login', {
+  url: '/login',
+  templateUrl: 'templates/login.html',
+  controller: 'loginController'
+ })
 
 
-  .state('app.mainMenu', {
-    url: '/mainMenu',
+  .state('tab.beneficious', {
+    url: '/beneficious',
     views: {
-      'menuContent': {
-        templateUrl: 'templates/mainMenu.html',
-        controller: 'mainMenuController'
+      'tab-beneficious': {
+        templateUrl: 'templates/beneficious.html',
+        controller: 'beneficiousController'
       }
     }
   })
 
-  .state('app.beneficiosSubmenu', {
-    url: '/beneficiosSubmenu',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/beneficiosSubmenu.html',
-        controller: 'beneficiosSubmenuController'
-      }
-    }
-  })
 
-  .state('app.beneficiosDetailPage', {
+  .state('tab.beneficiosDetailPage', {
     url: '/beneficiosDetailPage',
     views: {
-      'menuContent': {
+      'tab-beneficious': {
         templateUrl: 'templates/beneficiosDetailPage.html',
         controller: 'beneficiosDetailController'
       }
     }
   })
 
-  .state('app.formacionSubmenu', {
-    url: '/formacionSubmenu',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/formacionSubmenu.html',
-        controller: 'formacionSubmenuController'
-      }
-    }
-  })
-
-  .state('app.training', {
-    url: '/training',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/training.html',
-        controller: 'trainingController'
-      }
-    }
-  })
-
-  .state('app.leave', {
-      url: '/leave',
+  .state('tab.induccion', {
+      url: '/induccion',
       views: {
-        'menuContent': {
-          templateUrl: 'templates/leave.html',
-          controller: 'leaveController'
+        'tab-induccion': {
+          templateUrl: 'templates/induccion.html',
+          controller: 'induccionController'
         }
       }
-    });
+    })
+
+    .state('tab.chat-detail', {
+      url: '/chats/:chatId',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/chat-detail.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+
+
+    .state('tab.more', {
+      url: '/more',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/more.html',
+          controller: 'moreController'
+        }
+      }
+    })
+
+    .state('tab.formacionSubmenu', {
+      url: '/formacionSubmenu',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/formacionSubmenu.html',
+          controller: 'formacionSubmenuController'
+        }
+      }
+    })
+
+
+  .state('tab.formulario', {
+    url: '/formulario',
+    views: {
+      'tab-formulario': {
+        templateUrl: 'templates/formulario.html',
+        controller: 'formularioController'
+      }
+    }
+  })
+
+  .state('tab.noticas', {
+    url: '/noticas',
+    views: {
+      'tab-noticas': {
+        templateUrl: 'templates/noticas.html',
+        controller: 'noticasController'
+      }
+    }
+  });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/login');
+  $urlRouterProvider.otherwise('/login');
+
 });
