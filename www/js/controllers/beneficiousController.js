@@ -23,6 +23,10 @@ angular.module('starter').controller('beneficiousController', function($scope, $
   $scope.goBack = function() {
     $window.history.back();
   };
+  $scope.goBeneficiousSubCategoryPage= function() {
+    $state.go('tab.beneficiousSubCategory');
+
+  };
 
   $scope.goBeneficiousCouponsPage= function() {
     $state.go('tab.beneficiousCoupons');

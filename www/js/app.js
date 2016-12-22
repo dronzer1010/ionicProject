@@ -60,6 +60,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.beneficiousSubCategory', {
+    url: '/beneficiousSubCategory',
+    views: {
+      'tab-beneficious': {
+        templateUrl: 'templates/beneficiousSubCategory.html',
+        controller: 'beneficiousSubCategoryController'
+      }
+    }
+  })
+  
   .state('tab.beneficiousCoupons', {
     url: '/beneficiousCoupons',
     views: {
