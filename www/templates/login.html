@@ -1,36 +1,30 @@
-<ion-view title="Login" hide-nav-bar="true">
-	<ion-content overflow-scroll="true" scroll="false">
-		<div class="login">
+<ion-view title="Login" hide-nav-bar="true" >
+	<ion-content overflow-scroll="true" scroll="false" id="logincontent">
 
-		<!-- <div class="spacer" style="width: 300px; height: 23px;"></div> -->
-
-		<div class="row" style="padding-top: 200px;">
-
+		<div class="row" style="padding-top: 142px;">
 			<div class="col col-10"></div>
 			<div class="row col col-80">
 				<div class="row">
 					<div class="col col-100" style="text-align: center;">
 						<img src="img/icono-login.png" style="height: 120px;">
 					</div>
-			</div>
+			  </div>
 			<div class="row">
 				<div class="col col-100" style="text-align: center;">
 				<span style="color:#12a7dd;font-size: 21px;font-weight: 600;">Member Login</span>
 				</div>
-		</div>
+	  	</div>
 				<form class="list">
-
-
 					<label class="item item-input" >
 						<i class="icon ion-person placeholder-icon" style="color: #12a7dd;"></i>
-						<input type="text" ng-model="employId" placeholder="Username" required>
+						<input type="text" ng-model="loginData.employId" placeholder="Username" required>
 					</label><br/>
 					<label class="item item-input">
 							<i class="icon ion-ios-locked placeholder-icon" style="color: #12a7dd;"></i>
-							<input type="password" ng-model="password" placeholder="Password">
+							<input type="password" ng-model="loginData.password" placeholder="Password">
 					</label>
 					<div class="row">
-							<ion-checkbox style="padding-left: 50px;font-size: 11px;margin-left: -16px;background-color: #ccecfc;border: none;width: 65%;color: #12a7dd;">Remember me</ion-checkbox>
+							<ion-checkbox style="padding-left: 50px;font-size: 11px;margin-left: -16px;background-color: #ccecfc;border: none;width: 65%;color: #12a7dd;" ng-model="remember">Remember me</ion-checkbox>
 							<div class="col" style="padding-top: 13px;font-size: 11px;text-align: right;color: #12a7dd;" ng-click="forgotPassword()">Forgot Password?</div>
 					</div>
 					<div class="row">
@@ -42,15 +36,9 @@
 					</div>
 				</form>
 
-					</div>
+	  	</div>
 				<div class="col col-10"></div>
-			</div>
-			</div>
-			</ion-content>
-			<script  type="text/ng-template">
-				<div class="error" ng-message="required">
-					<i class="ion-information-circled"></i>
-       This field is required!
-				</div>
-			</script>
-		</ion-view>
+	  </div>
+		</ion-content>
+
+	</ion-view>
