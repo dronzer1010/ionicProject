@@ -1,7 +1,7 @@
-angular.module('starter').controller('noticasController', function($scope, $state) {
+angular.module('starter').controller('noticasController', function($scope, $state, $window) {
 
-console.log('yes noticasController calling...');
-$scope.settings = {
-  enableFriends: true
-};
+  $scope.goBack = function() {
+    $window.history.back();
+  };
+
 });

@@ -1,7 +1,8 @@
-angular.module('starter').controller('formularioController', function($scope, $state) {
+angular.module('starter').controller('formularioController', function($scope, $state, $window) {
 
-console.log('yes formularioController calling...');
-$scope.settings = {
-  enableFriends: true
-};
+  $scope.goBack = function() {
+    $window.history.back();
+  };
+
+
 });

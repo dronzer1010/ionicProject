@@ -1,9 +1,19 @@
 <ion-view view-title="Beneficios Detail Page">
+  <ion-nav-title>
+    <img class="headerImgStyle" src="img/logo.png">
+  </ion-nav-title>
   <ion-nav-buttons side="left">
-    <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
-      <i class="icon ion-ios-arrow-back"></i>Back
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+      <i class="icon ion-arrow-left-b"></i>
     </button>
   </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <ion-buttons>
+      <button class="button button-icon icon ion-navicon-round" style="color: #00428a;"></button>
+    </ion-buttons>
+  </ion-nav-buttons>
+
   <ion-content>
 
   <div style="text-align:center;padding-top: 25px;font-size: 15px;font-weight: 600;">This is Title for detail about category.</div>
@@ -16,7 +26,7 @@
         <div class="row">
         <div class="col col-45">
           <button class="button button-dark" style="border-radius: 15px;height: 100%;width: 100%;">
-          Button-dark
+          <!-- Button-dark -->
           </button>
         </div>
         <div class="col col-10"></div>

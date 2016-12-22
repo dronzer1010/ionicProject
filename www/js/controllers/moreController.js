@@ -1,9 +1,14 @@
-angular.module('starter').controller('moreController', function($scope, $state) {
+angular.module('starter').controller('moreController', function($scope, $state, $window) {
 
-
+  $scope.goBack = function() {
+    $window.history.back();
+  };
 $scope.goFormacionSubMenu = function () {
   $state.go('tab.formacionSubmenu');
   console.log('yes goFormacionSubMenu function calling...');
+};
+$scope.goBeneficiousSubmenu = function () {
+  $state.go('tab.beneficious');
 };
 
 });

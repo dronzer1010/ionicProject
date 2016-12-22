@@ -27,6 +27,7 @@ angular.module('starter')
                 password: loginObj.password
             }
         }).success(function(body, status, headers, config) {
+            console.log("login body : " + JSON.stringify(body));
             def.resolve(JSON.stringify(body));
         }).
         error(function(error, status, headers, config) {

@@ -1,4 +1,6 @@
-angular.module('starter').controller('induccionController', function($scope, $state) {
+angular.module('starter').controller('induccionController', function($scope, $state, $window) {
 
-console.log('yes induccionController calling...');
+  $scope.goBack = function() {
+    $window.history.back();
+  };
 });

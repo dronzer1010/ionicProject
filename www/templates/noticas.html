@@ -1,16 +1,40 @@
 <ion-view view-title="Noticias">
-  <ion-content>
-    <!-- <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+  <ion-nav-title>
+    <img class="headerImgStyle" src="img/logo.png">
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+      <i class="icon ion-arrow-left-b"></i>
+    </button>
+  </ion-nav-buttons>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list> -->
+  <ion-nav-buttons side="right">
+    <ion-buttons>
+      <button class="button button-icon icon ion-navicon-round" style="color: #00428a;"></button>
+    </ion-buttons>
+  </ion-nav-buttons>
+  <ion-content class="fontHeaderColor" style="background-color: #ffdd00;border-bottom: 2px solid #00428a;">
+    <div>
+    <div>
+        <div class="coupenHeaderStyle">Noticias y avisos</div>
+        <div>
+            <img src="img/noticias_1.png" class="coupenImgStyle" style="border-bottom: none;">
+       </div>
+   </div>
+   <div class="formularioDivStyle"></div>
+ </div>
+ <ion-list >
+   <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
+     <i class="icon ion-android-attach"></i>
+     <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;">1 present..pdf</h2>
+   </ion-item><br/>
+   <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
+     <i class="icon ion-android-attach"></i>
+     <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;">2 present..pdf</h2>
+   </ion-item>
+
+
+ </ion-list>
+
   </ion-content>
 </ion-view>

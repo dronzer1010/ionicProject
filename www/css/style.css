@@ -10,7 +10,7 @@
   max-height: 22px !important;
 }
 .beneficioSubMenuHeader{
-  padding-top: 10px;
+  padding-top: 5px;
   margin-right: -40px !important;
 }
 .buttonRightStyle{
@@ -64,9 +64,9 @@
 .tabs-striped.tabs-positive .tabs {
     background-color: #ffdd00;
 }
-.ion-tabs.tabs-color-active-positive .tab-item {
+/*.ion-tabs.tabs-color-active-positive .tab-item {
     color: #11205f !important;
-}
+}*/
 
 .tabs-positive > .tabs, .tabs.tabs-positive {
     border-color: #ffdd00;
@@ -80,20 +80,6 @@
     opacity: 1;
 }
 
-/*.pane {
-        background: url(../img/home_15.png) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-    }*/
-    /*.scroll-content{
-     background: url(../img/home_15.png) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }*/
-
     #homecontent {
         background-image: url(../img/home_1.png) !important;
         -webkit-background-size: cover !important;
@@ -101,3 +87,62 @@
         background-size: cover !important;
         top: 44px !important;
     }
+    ion-tabs.tabs-color-active-positive .tab-item {
+        color: #03468c !important;
+        font-weight: bold !important;
+    }
+    #coupnImg1 {
+        background-image: url(../img/coupen_1.png) !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        /*top: 44px !important;*/
+    }
+    #coupnImg2 {
+        background-image: url(../img/coupen_2.png) !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        /*top: 44px !important;*/
+    }
+.coupenImageFontStyle{
+  margin-top: -31px;
+  font-size: 16px;
+  text-align: right;
+  padding-right: 15px;
+  height: 20px;
+}
+
+.coupenHeaderStyle{
+  background-color: #ffdd00;
+  padding: 8px;
+  font-size: 18px;
+  height: 47px;
+}
+.coupenImgStyle{
+  margin-top: -11px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.formularioParaStyle{
+  font-size: 16px;
+  padding-left: 12px;
+  padding-top: 22px;
+  font-family: inherit;
+}
+.formularioDivStyle{
+  background-color: #ffdd00;
+  margin-top: -5px;
+  height: 17px;
+}
+.fontHeaderColor{
+  color: #00428a !important;
+  font-weight: 500;
+}
+.moreFontColor{
+  font-weight: 700;
+  color: #00428a;
+  font-size: 17px;
+}
