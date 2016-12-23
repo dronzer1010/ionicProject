@@ -6,7 +6,7 @@ angular.module('starter').controller('noticasController', function($scope, $stat
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };
-  $scope.link='www.facebook.com';
+  $scope.link='http://www.cbu.edu.zm/downloads/pdf-sample.pdf';
 
   $scope.File_Id = 'myId';
 
