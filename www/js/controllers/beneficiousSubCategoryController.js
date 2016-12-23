@@ -1,18 +1,35 @@
-angular.module('starter').controller('beneficiousSubCategoryController', function($scope, $state, $window) {
+angular.module('starter').controller('beneficiousSubCategoryController', function($scope, $state, $window,$stateParams, CouponService) {
 
-
+  $scope.catId = $stateParams.catId;
   $scope.goBack = function() {
-    $window.history.back();
+    $state.go('tab.beneficious');
+    // $window.history.back();
   };
 
-  $scope.goBeneficiousCouponsPage= function() {
-    $state.go('tab.beneficiousCoupons');
+  $scope.$on('$ionicView.enter', function(ev) {
+    if (ev.targetScope !== $scope)
+      return;
 
+    CouponService.getSubCategories($stateParams.catId).then(function(response) {
+      $scope.subCategories = [];
+      if (response.success = "true") {
+          $scope.subCategories = response.data;
+          // console.log('$scope.subCategories : ' +  angular.toJson(response.data, ' ') );
+      }
+    }).catch(function(error) {
+        var error = JSON.parse(error);
+        IonicPopupService.alert("ERROR!!", error.msg);
+        console.log('error : ' + angular.toJson(error, ' '));
+    });
+
+  });
+  $scope.goBeneficiousCouponsPage= function(subCatId) {
+    // $state.go('tab.beneficiousCoupons');
+      $state.go('tab.beneficiousCoupons', { 'subCatId': subCatId });
+  };
+  $scope.gomenuPage = function () {
+    $state.go('tab.more');
   };
 
-$scope.goDetailPage = function() {
-  $state.go('tab.beneficiosDetailPage');
-
-};
 
 });

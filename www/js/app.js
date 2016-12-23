@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.beneficiousSubCategory', {
-    url: '/beneficiousSubCategory',
+    url: '/beneficiousSubCategory/:catId',
     views: {
       'tab-beneficious': {
         templateUrl: 'templates/beneficiousSubCategory.html',
@@ -69,20 +69,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-  
+
   .state('tab.beneficiousCoupons', {
-    url: '/beneficiousCoupons',
+    url: '/beneficiousCoupons/:subCatId',
     views: {
       'tab-beneficious': {
         templateUrl: 'templates/beneficiousCoupons.html',
-        controller: 'beneficiousController'
+        controller: 'beneficiosCoupenController'
       }
     }
   })
 
 
   .state('tab.beneficiosDetailPage', {
-    url: '/beneficiosDetailPage',
+    url: '/beneficiosDetailPage/:coupenId',
     views: {
       'tab-beneficious': {
         templateUrl: 'templates/beneficiosDetailPage.html',

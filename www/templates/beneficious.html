@@ -9,13 +9,14 @@
     </button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <ion-buttons>
-      <button class="button button-icon icon ion-navicon-round" style="color: #00428a;"></button>
-    </ion-buttons>
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
   </ion-nav-buttons>
+
   <ion-content>
     <ion-list ng-repeat="cat in categories">
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goBeneficiousSubCategoryPage()">
+      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goBeneficiousSubCategoryPage(cat._id)">
         <img src="img/ionic.png" class="imgStyle" >
         <h2 class="beneficioSubMenuHeader">{{cat.category}}</h2>
         <!-- <button class="button button-small button-calm buttonRightStyle" ng-click="goMore()">More</button> -->

@@ -9,21 +9,19 @@
     </button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <ion-buttons>
-      <button class="button button-icon icon ion-navicon-round" style="color: #00428a;"></button>
-    </ion-buttons>
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
   </ion-nav-buttons>
   <ion-content>
     <ion-list >
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goBeneficiousCouponsPage()">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Belleza.........</h2>
-        <!-- <button class="button button-small button-calm buttonRightStyle" ng-click="goMore()">More</button> -->
+      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" ng-repeat="subCat in subCategories" type="item-text-wrap" ng-click="goBeneficiousCouponsPage(subCat._id)">
+        <!-- <img src="img/ionic.png" class="imgStyle" > -->
+        <h2 class="beneficioSubMenuHeader">{{subCat.name}}</h2>
       </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
+      <!-- <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
         <img src="img/ionic.png" class="imgStyle" >
         <h2 class="beneficioSubMenuHeader">Educacion</h2>
-        <!-- <button class="button button-small button-calm buttonRightStyle">More</button> -->
       </ion-item>
       <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
         <img src="img/ionic.png" class="imgStyle" >
@@ -52,7 +50,7 @@
       <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
         <img src="img/ionic.png" class="imgStyle" >
         <h2 class="beneficioSubMenuHeader">Otros beneficios </h2>
-      </ion-item>
+      </ion-item> -->
 
     </ion-list>
   </ion-content>

@@ -3,6 +3,8 @@ angular.module('starter').controller('formularioController', function($scope, $s
   $scope.goBack = function() {
     $window.history.back();
   };
-
+  $scope.gomenuPage = function () {
+    $state.go('tab.more');
+  };
 
 });

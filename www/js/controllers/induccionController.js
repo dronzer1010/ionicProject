@@ -3,4 +3,8 @@ angular.module('starter').controller('induccionController', function($scope, $st
   $scope.goBack = function() {
     $window.history.back();
   };
+
+  $scope.gomenuPage = function () {
+    $state.go('tab.more');
+  };
 });

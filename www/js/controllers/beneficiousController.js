@@ -7,9 +7,9 @@ angular.module('starter').controller('beneficiousController', function($scope, $
     CouponService.getAllCategories().then(function(response) {
       $scope.categories = [];
       if (response.success = "true") {
-        console.log('yes true');
+        // console.log('yes true');
           $scope.categories = response.data;
-          console.log('$scope.categories : ' +  angular.toJson(response.data, ' ') );
+          // console.log('$scope.categories : ' +  angular.toJson(response.data, ' ') );
       }
     }).catch(function(error) {
         var error = JSON.parse(error);
@@ -23,9 +23,9 @@ angular.module('starter').controller('beneficiousController', function($scope, $
   $scope.goBack = function() {
     $window.history.back();
   };
-  $scope.goBeneficiousSubCategoryPage= function() {
-    $state.go('tab.beneficiousSubCategory');
-
+  $scope.goBeneficiousSubCategoryPage= function(catId) {
+    // $state.go('tab.beneficiousSubCategory');
+      $state.go('tab.beneficiousSubCategory', { 'catId': catId });
   };
 
   $scope.goBeneficiousCouponsPage= function() {
@@ -33,9 +33,9 @@ angular.module('starter').controller('beneficiousController', function($scope, $
 
   };
 
-$scope.goDetailPage = function() {
-  $state.go('tab.beneficiosDetailPage');
 
+$scope.gomenuPage = function () {
+  $state.go('tab.more');
 };
 
 });

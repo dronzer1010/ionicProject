@@ -8,23 +8,26 @@
       <i class="icon ion-arrow-left-b"></i>
     </button>
   </ion-nav-buttons>
-  
+
   <ion-nav-buttons side="right">
-    <ion-buttons>
-      <button class="button button-icon icon ion-navicon-round" style="color: #00428a;"></button>
-    </ion-buttons>
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
   </ion-nav-buttons>
   <ion-content>
-    <div ng-click="goDetailPage()">
-        <div class="coupenHeaderStyle">Rossana Tabares </div>
+    <div  ng-repeat="coupens in coupensList" ng-click="goDetailPage(coupens._id)">
+        <div class="coupenHeaderStyle">{{coupens.title}} </div>
         <div  style="border-bottom: 3px solid;">
-            <img src="img/coupen_1.png" class="coupenImgStyle">
+            <!-- <img src="img/coupen_1.png" class="coupenImgStyle"> -->
+            <img src="img/coupen_1.png" class="coupenImgStyle" ng-hide="!!coupens.image">
+            <img ng-src="http://banistmo-backend.herokuapp.com/{{coupens.image}}" class="coupenImgStyle" ng-show="!!coupens.image">
+            <!-- <img ng-src="http://banistmo-backend.herokuapp.com/{{coupens.image}}" class="coupenImgStyle" ng-hide="!!coupens.image"> -->
        </div>
-       <div class="coupenImageFontStyle">demo
-        </div>
+       <div class="coupenImageFontStyle"></div>
+       <!-- <div class="coupenImageFontStyle">demo</div> -->
 
     </div>
-    <div ng-click="goDetailPage()">
+    <!-- <div ng-click="goDetailPage()">
         <div class="coupenHeaderStyle">Rossana Tabares </div>
         <div  style="border-bottom: 3px solid;">
             <img src="img/coupen_2.png" class="coupenImgStyle">
@@ -42,7 +45,7 @@
        <div class="coupenImageFontStyle">demo
         </div>
 
-    </div>
+    </div> -->
 
 
   </ion-content>

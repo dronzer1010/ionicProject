@@ -3,5 +3,9 @@ angular.module('starter').controller('noticasController', function($scope, $stat
   $scope.goBack = function() {
     $window.history.back();
   };
+  $scope.gomenuPage = function () {
+    $state.go('tab.more');
+  };
+  $scope.link = 'https://www.google.com/';
 
 });
