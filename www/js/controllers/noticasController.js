@@ -6,6 +6,9 @@ angular.module('starter').controller('noticasController', function($scope, $stat
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };
-  $scope.link = 'https://www.google.com/';
+  $scope.link='www.facebook.com';
+
+  $scope.File_Id = 'myId';
+
 
 });

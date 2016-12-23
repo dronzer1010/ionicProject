@@ -26,10 +26,11 @@
  <ion-list >
    <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
      <i class="icon ion-android-attach"></i>
-    <!-- <a href="https://www.thesitewizard.com/" target="_blank">thesitewizard.com</a> -->
-     <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;">1 present..pdf</h2>
-     <!-- <embed src="{{link}}" width="200" height="200">fgfg</embed> -->
-     <!-- <span style="font-weight: normal;" ng-bind-html="link | linky:'_blank' | hrefToJS">1 present..pdf</span> -->
+
+     <!-- <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;">1 present..pdf</h2> -->
+     <!-- <div ng-bind-html="item.article_details | linky:'_blank' | hrefToJS"> sample1 pdf</div> -->
+     <div ng-bind-html="link | linky:'_blank' | hrefToJS"> sample1 pdf</div>
+     <a target="_blank" href="https://ionicframework.com/docs/v2/ionicons//{{File_Id}}" style="line-height:20px;text-decoration: blink;">sample1 pdf</a>
    </ion-item><br/>
    <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
      <i class="icon ion-android-attach"></i>

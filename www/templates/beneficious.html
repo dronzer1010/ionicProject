@@ -15,45 +15,16 @@
   </ion-nav-buttons>
 
   <ion-content>
+    <div>
+        <img src="img/formulario_1.png" class="coupenImgStyle">
+   </div>
+   <div class="formularioDivStyle"></div>
     <ion-list ng-repeat="cat in categories">
       <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goBeneficiousSubCategoryPage(cat._id)">
         <img src="img/ionic.png" class="imgStyle" >
         <h2 class="beneficioSubMenuHeader">{{cat.category}}</h2>
-        <!-- <button class="button button-small button-calm buttonRightStyle" ng-click="goMore()">More</button> -->
       </ion-item>
-      <!-- <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Educacion</h2> -->
-        <!-- <button class="button button-small button-calm buttonRightStyle">More</button> -->
-      <!-- </ion-item> -->
-      <!-- <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Entertenimiento</h2>
-      </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Esparcimiento </h2>
-      </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Estudios </h2>
-      </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Hoteles </h2>
-      </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Restaurantes </h2>
-      </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Salud </h2>
-      </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader">Otros beneficios </h2>
-      </ion-item> -->
+
 
     </ion-list>
   </ion-content>
