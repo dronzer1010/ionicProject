@@ -124,7 +124,7 @@
 .coupenImgStyle{
   margin-top: -11px;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #00428a;
 }
 .formularioParaStyle{
   font-size: 16px;
@@ -145,4 +145,11 @@
   font-weight: 700;
   color: #00428a;
   font-size: 17px;
+}
+.bottomBorder{
+  border-bottom: 1px solid #00428a !important;
+}
+.fontColorStyle{
+  color: #00428a;
+  font-weight: 600 !important;
 }
