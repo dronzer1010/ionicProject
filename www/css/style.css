@@ -153,3 +153,7 @@
   color: #00428a;
   font-weight: 600 !important;
 }
+.bar.bar-stable .title {
+    color: #00428a;
+    font-weight: 700;
+}

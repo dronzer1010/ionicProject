@@ -12,6 +12,7 @@ angular.module('starter').controller('beneficiosCoupenController', function($sco
       return;
 
     CouponService.getAllCoupens().then(function(response) {
+      console.log('coupens response : ' + angular.toJson(response.data, ' '));
       $scope.coupensList = [];
       if (response.success = "true") {
           //$scope.data = response.data;

@@ -131,6 +131,44 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('tab.noticiasPage', {
+      url: '/noticiasPage',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/noticiasPage.html',
+          controller: 'noticiasPageController'
+        }
+      }
+    })
+    .state('tab.noticiasDetailPage', {
+      url: '/noticiasDetailPage/:data_obj',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/noticiasDetailPage.html',
+          controller: 'noticiasDetailPageController'
+        }
+      }
+    })
+
+    .state('tab.contactos', {
+      url: '/contactos',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/contactos.html',
+          controller: 'contactosController'
+        }
+      }
+    })
+
+    .state('tab.contactosDetailPage', {
+      url: '/contactosDetailPage',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/contactosDetailPage.html',
+          controller: 'contactosDetailController'
+        }
+      }
+    })
 
 
   .state('tab.formulario', {
@@ -142,6 +180,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+
 
   .state('tab.noticas', {
     url: '/noticas',

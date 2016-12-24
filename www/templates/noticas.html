@@ -23,11 +23,12 @@
    </div>
    <div class="formularioDivStyle"></div>
  </div>
- <ion-list >
+ <ion-list scroll="true">
    <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap" ng-repeat="media in circulars">
      <i class="icon ion-android-attach" ng-if="media.documentType === 'application/pdf'"></i>
      <div ng-if="media.documentType === 'application/pdf'" ng-click="view_pdf('https://docs.google.com/viewer?url=https://banistmo-backend.herokuapp.com/'+media.path)" style="padding-top: 9px;"> {{media.title}}</div>
    </ion-item><br/>
+   
 
    <!-- <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
      <i class="icon ion-android-attach"></i>
