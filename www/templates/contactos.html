@@ -16,10 +16,11 @@
 
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" ng-click="goContactosDetailPage()" style="border-bottom: 1px solid #00428a;" type="item-text-wrap" ng-click="goBeneficiousSubCategoryPage(cat._id)">
-        <img src="img/ionic.png" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader fontColorStyle">Contactos Title</h2>
-        <div>Description for this site.</div>
+      <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" ng-repeat="contactData in contactosData" ng-click="goContactosDetailPage(contactData)" style="border-bottom: 1px solid #00428a;" type="item-text-wrap" ng-click="goBeneficiousSubCategoryPage(cat._id)">
+        <img ng-src="http://banistmo-backend.herokuapp.com/{{contactData.image}}" class="imgStyle" ng-if="!!contactData.image">
+        <img src="img/ionic.png" class="imgStyle" ng-hide="!!contactData.image">
+        <h2 class="beneficioSubMenuHeader fontColorStyle">{{contactData.name}}</h2>
+        <div>{{contactData.email}}</div>
       </ion-item>
 
     </ion-list>

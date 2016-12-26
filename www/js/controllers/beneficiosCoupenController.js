@@ -1,7 +1,7 @@
 angular.module('starter').controller('beneficiosCoupenController', function($scope, $state, $window, CouponService, $stateParams) {
 
   $scope.subCatId = $stateParams.subCatId;
-  console.log('$scope.subCatId.. : ' + $scope.subCatId);
+  // console.log('$scope.subCatId.. : ' + $scope.subCatId);
   $scope.goBack = function() {
     $state.go('tab.beneficiousSubCategory');
     // $window.history.back();
@@ -12,18 +12,16 @@ angular.module('starter').controller('beneficiosCoupenController', function($sco
       return;
 
     CouponService.getAllCoupens().then(function(response) {
-      console.log('coupens response : ' + angular.toJson(response.data, ' '));
+      // console.log('coupens response : ' + angular.toJson(response.data, ' '));
       $scope.coupensList = [];
       if (response.success = "true") {
-          //$scope.data = response.data;
         for (var i = 0;  i < response.data.length; i++) {
           if (response.data[i].subcategory === $stateParams.subCatId+'') {
             $scope.coupensList.push(response.data[i]);
           }
         }
 
-          // $scope.allCoupens = response.data;
-          // console.log('$scope.allCoupens : ' +  angular.toJson(response.data, ' ') );
+
       }
     }).catch(function(error) {
         var error = JSON.parse(error);
@@ -33,9 +31,13 @@ angular.module('starter').controller('beneficiosCoupenController', function($sco
 
   });
 
-  $scope.goDetailPage = function(coupenId) {
-    $state.go('tab.beneficiosDetailPage', { 'coupenId': coupenId });
+  $scope.goDetailPage = function(data) {
+    $state.go('tab.beneficiosDetailPage', {
+      'coupen_obj': JSON.stringify(data)
+    });
   };
+
+
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };

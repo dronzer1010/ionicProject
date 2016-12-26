@@ -26,24 +26,24 @@ angular.module('starter').controller('noticasController', function($scope, $stat
 
   });
 
-  $scope.$on('$ionicView.enter', function(ev) {
-    if (ev.targetScope !== $scope)
-      return;
-
-    NoticiasService.getAllNotices().then(function(response) {
-      console.log('noticias data..: ' + angular.toJson(response , ' '));
-      if (response.success = "true") {
-        // console.log('noticias data..: ' + angular.toJson(response , ' '));
-
-
-      }
-    }).catch(function(error) {
-        var error = JSON.parse(error);
-        IonicPopupService.alert("ERROR!!", error.msg);
-        console.log('error : ' + angular.toJson(error, ' '));
-    });
-
-  });
+  // $scope.$on('$ionicView.enter', function(ev) {
+  //   if (ev.targetScope !== $scope)
+  //     return;
+  //
+  //   NoticiasService.getAllNotices().then(function(response) {
+  //     console.log('noticias data..: ' + angular.toJson(response , ' '));
+  //     if (response.success = "true") {
+  //       // console.log('noticias data..: ' + angular.toJson(response , ' '));
+  //
+  //
+  //     }
+  //   }).catch(function(error) {
+  //       var error = JSON.parse(error);
+  //       IonicPopupService.alert("ERROR!!", error.msg);
+  //       console.log('error : ' + angular.toJson(error, ' '));
+  //   });
+  //
+  // });
 
 
 

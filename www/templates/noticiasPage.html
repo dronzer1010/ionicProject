@@ -17,9 +17,9 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" ng-repeat="data in noticiasData" ng-click="goNoticiasDetailPage(data)" style="border-bottom: 1px solid #00428a;" type="item-text-wrap" >
-        <img ng-src="{{data.image}}" class="imgStyle" >
-        <h2 class="beneficioSubMenuHeader fontColorStyle">{{data.title}}</h2>
-        <div>{{data.content}}</div>
+        <img ng-src="http://banistmo-backend.herokuapp.com/{{data.image}}" class="imgStyle" >
+        <h2 class="beneficioSubMenuHeader fontColorStyle" style="height: 32px;">{{data.title}}</h2>
+        <!-- <div>{{data.content}}</div> -->
       </ion-item>
 
     </ion-list>

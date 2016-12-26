@@ -1,6 +1,5 @@
-angular.module('starter').controller('beneficiosDetailController', function($scope, $state, $window) {
+angular.module('starter').controller('beneficiosDetailController', function($scope, $state, $window,$stateParams) {
 
-console.log('yes comes here...');
   $scope.goBack = function() {
     // $state.go('tab.beneficiousCoupons');
     $window.history.back();
@@ -8,6 +7,8 @@ console.log('yes comes here...');
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };
- 
+  $scope.coupenDetails= JSON.parse($stateParams.coupen_obj);
+
+  // console.log('$stateParams.data : ' + angular.toJson($scope.coupenDetails , ' ') );
 
 });

@@ -1,6 +1,5 @@
-angular.module('starter').controller('contactosDetailController', function($scope, $state, $window,ContactosService) {
+angular.module('starter').controller('contactosDetailController', function($scope, $state, $window,ContactosService,$stateParams) {
 
-console.log('yes comes here...');
   $scope.goBack = function() {
     $state.go('tab.contactos');
     // $window.history.back();
@@ -9,5 +8,6 @@ console.log('yes comes here...');
     $state.go('tab.more');
   };
 
-
+  $scope.contactosData= JSON.parse($stateParams.contactos_data);
+  // console.log('$stateParams.data : ' + angular.toJson($scope.contactosData , ' ') );
 });

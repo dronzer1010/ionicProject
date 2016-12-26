@@ -23,7 +23,7 @@ angular.module('starter')
                 return str.join("&");
             }
         }).success(function(body, status, headers, config) {
-            console.log("body : " + JSON.stringify(body));
+            // console.log("body : " + JSON.stringify(body));
             def.resolve(body);
         }).
         error(function(error, status, headers, config) {
@@ -55,7 +55,7 @@ angular.module('starter')
                 return str.join("&");
             }
         }).success(function(body, status, headers, config) {
-            console.log(" body : " + JSON.stringify(body));
+            // console.log(" body : " + JSON.stringify(body));
             // def.resolve(JSON.stringify(body));
             def.resolve(body);
         }).
@@ -88,7 +88,7 @@ angular.module('starter')
                 return str.join("&");
             }
         }).success(function(body, status, headers, config) {
-            console.log(" body : " + JSON.stringify(body));
+            // console.log(" body : " + JSON.stringify(body));
             def.resolve(body);
         }).
         error(function(error, status, headers, config) {
@@ -99,5 +99,5 @@ angular.module('starter')
         return def.promise;
     };
 
-    
+
 }]);

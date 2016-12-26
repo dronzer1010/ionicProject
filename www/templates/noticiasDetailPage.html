@@ -16,16 +16,24 @@
 
   <ion-content  style="border-bottom: 2px solid #00428a;">
     <div>
-        <div class="coupenHeaderStyle">Noticias page Title</div>
+        <div class="coupenHeaderStyle">{{myData.title}}</div>
         <div>
-            <img src="img/formulario_1.png" class="coupenImgStyle">
+            <img src="img/formulario_1.png" style="width: 100%;border: 1px solid #00428a;" ng-hide="!!myData.image">
+            <img ng-src="http://banistmo-backend.herokuapp.com/{{myData.image}}" style="width: 100%;border: 1px solid #00428a;" ng-if="!!myData.image">
        </div>
    </div>
    <div class="formularioDivStyle"></div>
 
 
-  <h3 style="padding-left: 15px;font-size: 15px;font-weight: 600;color: #00428a;font-size: 19px !important;">This is for demo project</h3>
-   <div class="formularioParaStyle" style="color: black;">By default, side menus are hidden underneath their side menu content and can be opened by swiping the content left or right or by toggling a button to show the side menu. Additionally, by adding the exposeAsideWhen attribute directive to an ionSideMenu element directive, </div>
+  <h3 style="padding-left: 15px;font-size: 15px;font-weight: 600;color: #00428a;font-size: 19px !important;">{{myData.title}}</h3>
+   <div class="formularioParaStyle" style="color: black;">{{myData.content}}</div><br/>
+   <ion-list scroll="true">
+     <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap" style="border:1px solid #00428a">
+       <i class="icon ion-android-attach" ng-if="!!myData.attachedDocument"></i>
+       <div ng-if="!!myData.attachedDocument" ng-click="view_pdf('https://docs.google.com/viewer?url=https://banistmo-backend.herokuapp.com/'+myData.attachedDocument)" style="padding-top: 9px;"> Pdf file</div>
+     </ion-item><br/>
 
+
+   </ion-list>
   </ion-content>
 </ion-view>

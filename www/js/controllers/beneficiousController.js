@@ -21,7 +21,8 @@ angular.module('starter').controller('beneficiousController', function($scope, $
 
 
   $scope.goBack = function() {
-    $window.history.back();
+    $state.go('tab.more');
+    // $window.history.back();
   };
   $scope.goBeneficiousSubCategoryPage= function(catId) {
     // $state.go('tab.beneficiousSubCategory');

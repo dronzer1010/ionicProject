@@ -13,27 +13,28 @@ angular.module('starter').controller('noticiasPageController', function($scope, 
     });
   };
 
-  $scope.noticiasData = [{
-    title: 'Noticias Title.',
-    content: 'This is description.',
-    image: 'img/formulario_1.png'
-  },
-  {
-    title: 'Noticias Title1.',
-    content: 'This is description1.',
-    image: 'img/formulario_1.png'
-  }
-];
-  console.log('$scope.noticiasData : ' + angular.toJson($scope.noticiasData , ' '));
+//   $scope.noticiasData = [{
+//     title: 'Noticias Title.',
+//     content: 'This is description.',
+//     image: 'img/formulario_1.png'
+//   },
+//   {
+//     title: 'Noticias Title1.',
+//     content: 'This is description1.',
+//     image: 'img/formulario_1.png'
+//   }
+// ];
+  // console.log('$scope.noticiasData : ' + angular.toJson($scope.noticiasData , ' '));
 
   $scope.$on('$ionicView.enter', function(ev) {
     if (ev.targetScope !== $scope)
       return;
 
     NoticiasPageService.getAllNotices().then(function(response) {
-      console.log('noticias data..: ' + angular.toJson(response , ' '));
+      // console.log('noticias data..: ' + angular.toJson(response , ' '));
       if (response.success = "true") {
-        console.log('noticias data..: ' + angular.toJson(response , ' '));
+        $scope.noticiasData = response.data;
+        // console.log('$scope.noticiasData..: ' + angular.toJson($scope.noticiasData , ' '));
 
 
       }

@@ -82,7 +82,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 
   .state('tab.beneficiosDetailPage', {
-    url: '/beneficiosDetailPage/:coupenId',
+    url: '/beneficiosDetailPage/:coupen_obj',
     views: {
       'tab-beneficious': {
         templateUrl: 'templates/beneficiosDetailPage.html',
@@ -161,7 +161,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('tab.contactosDetailPage', {
-      url: '/contactosDetailPage',
+      url: '/contactosDetailPage/:contactos_data',
       views: {
         'tab-more': {
           templateUrl: 'templates/contactosDetailPage.html',
