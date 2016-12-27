@@ -1,0 +1,83 @@
+<ion-view view-title="Calendario">
+  <!-- <ion-nav-title>
+    <img class="headerImgStyle" src="img/logo.png">
+  </ion-nav-title> -->
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+      <i class="icon ion-arrow-left-b"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="fontHeaderColor" style="border-bottom: 2px solid #00428a;" scroll="true">
+    <!-- <div>
+        <div class="coupenHeaderStyle">Calendario</div>
+        <div>
+            <img src="img/calendario_1.png" class="coupenImgStyle bottomBorder" style="border-bottom: none;">
+       </div>
+   </div>
+   <div class="formularioDivStyle"></div> -->
+
+   <!-- <div class="row">
+   <div class="col col-5"></div>
+   <div class="col col-90">
+   <div class="row">
+     <div class="col col-50">
+     <h2>Calendar</h2>
+     </div>
+     <div class="col col-50">
+       <button class="button button-positive" style="float: right;margin-top: -7px;min-height: 39px;" ng-click="requestModal.show()">REQUESTS</button>
+     </div>
+   </div>
+     <div>
+
+       <div>
+       <div class="row" >
+         <div class="col col-10"></div>
+         <div class="col" style="font-size: 15px;">
+         <strong style="text-align:center;"> has sent you a job request to start on {{request.startDate | date:'dd/MM/yyyy'}} at {{request.startTime | date:'hh:mm a' : 'UTC'}}.</strong>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col col-50">
+           <button class="button button-icon icon-left ion-checkmark-circled" style="float: right;color: green;" ng-click="acceptEventRequest(request)">ACCEPT
+           </button>
+         </div>
+
+         <div class="col col-50">
+           <button class="button button-icon icon-left ion-close-circled" style="color: red;" ng-click="declineEventRequest(request)">DECLINE
+           </button>
+         </div>
+       </div>
+     </div>
+     </div>
+   </div>
+   <div class="col col-5"></div>
+     </div> -->
+     <div class="row" style="background-color: #387ff5;padding: 0px !important;">
+       <div class="col-xs-12 col-md-12 calender-buttons">
+         <button class="button button-small button-positive btnLineHeight" ng-disabled="isToday()" ng-click="today()" style="font-size: 11px;background-color: royalblue;">Today</button>
+         <button class="button button-small button-positive btnLineHeight" ng-click="changeMode('month')" style="font-size: 11px;background-color: royalblue;">M</button>
+         <button class="button button-small button-positive btnLineHeight" ng-click="changeMode('week')" style="font-size: 11px;background-color: royalblue;">W</button>
+         <button class="button button-small button-positive btnLineHeight" ng-click="changeMode('day')" style="font-size: 11px;background-color: royalblue;">D</button>
+         <!-- <button class="button button-small button-positive btnLineHeight" ng-click="goCreateEventPage()"  style="font-size: 11px;background-color: royalblue;">Create Event</button> -->
+       </div>
+     </div>
+      <!-- <calendar calendar-mode="mode" event-source="eventSource" ng-model="calendar.currentDate" on-double-tap="onDoubleTap(calendar.currentDate, events)"> -->
+     <calendar calendar-mode="calendar.mode" event-source="calendar.eventSource" ng-model="calendar.currentDate" on-double-tap="onDoubleTap(calendar.currentDate, events)"
+      range-changed="reloadSource(startTime, endTime)" title-changed="onViewTitleChanged(title)" step="30" id="datepicker">
+
+       <!-- <calendar ng-model="calendar.currentDate" on-double-tap="onDoubleTap(calendar.currentDate, events)" calendar-mode="calendar.mode" event-source="calendar.eventSource"
+                 range-changed="reloadSource(startTime, endTime)"
+                 event-selected="onEventSelected(event)" title-changed="onViewTitleChanged(title)"
+                 step="30" id="datepicker">
+      </calendar> -->
+
+  </ion-content>
+
+
+</ion-view>

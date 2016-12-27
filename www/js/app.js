@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.rCalendar'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -170,6 +170,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('tab.calendario', {
+      url: '/calendario',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/calendario.html',
+          controller: 'calendarioController'
+        }
+      }
+    })
+
+    .state('tab.calendarioCreateEvent', {
+      url: '/calendarioCreateEvent/:event_obj',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/calendarioCreateEvent.html',
+          controller: 'calendarioCreateEventController'
+        }
+      }
+    })
 
   .state('tab.formulario', {
     url: '/formulario',

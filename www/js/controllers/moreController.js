@@ -13,10 +13,14 @@ $scope.goBeneficiousSubmenu = function () {
 
 $scope.goNoticiasPage = function () {
   $state.go('tab.noticiasPage');
-};
+}; 
 
 $scope.goContactosPage = function () {
   $state.go('tab.contactos');
+};
+
+$scope.goCalendarioPage = function () {
+  $state.go('tab.calendario');
 };
 
 });
