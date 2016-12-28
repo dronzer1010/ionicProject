@@ -13,7 +13,7 @@ $scope.goBeneficiousSubmenu = function () {
 
 $scope.goNoticiasPage = function () {
   $state.go('tab.noticiasPage');
-}; 
+};
 
 $scope.goContactosPage = function () {
   $state.go('tab.contactos');
@@ -22,5 +22,10 @@ $scope.goContactosPage = function () {
 $scope.goCalendarioPage = function () {
   $state.go('tab.calendario');
 };
+$scope.goFormularioPage = function () {
+  $state.go('tab.formulario');
+};
+ 
+
 
 });

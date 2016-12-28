@@ -7,4 +7,8 @@ angular.module('starter').controller('formularioController', function($scope, $s
     $state.go('tab.more');
   };
 
+  $scope.goVacacionesPage = function () {
+    $state.go('tab.vacaciones');
+  };
+
 });

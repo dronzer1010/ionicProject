@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.rCalendar'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.rCalendar', 'ion-datetime-picker'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -196,6 +196,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       'tab-formulario': {
         templateUrl: 'templates/formulario.html',
         controller: 'formularioController'
+      }
+    }
+  })
+
+  .state('tab.vacaciones', {
+    url: '/vacaciones',
+    views: {
+      'tab-formulario': {
+        templateUrl: 'templates/vacaciones.html',
+        controller: 'vacacionesController'
       }
     }
   })

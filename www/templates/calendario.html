@@ -13,7 +13,7 @@
       <i class="icon ion-navicon-round"></i>
     </button>
   </ion-nav-buttons>
-  <ion-content class="fontHeaderColor" style="border-bottom: 2px solid #00428a;" scroll="true">
+  <ion-content class="fontHeaderColor" style="border-bottom: 2px solid #00428a;">
     <!-- <div>
         <div class="coupenHeaderStyle">Calendario</div>
         <div>
@@ -22,62 +22,109 @@
    </div>
    <div class="formularioDivStyle"></div> -->
 
-   <!-- <div class="row">
-   <div class="col col-5"></div>
-   <div class="col col-90">
-   <div class="row">
-     <div class="col col-50">
-     <h2>Calendar</h2>
-     </div>
-     <div class="col col-50">
-       <button class="button button-positive" style="float: right;margin-top: -7px;min-height: 39px;" ng-click="requestModal.show()">REQUESTS</button>
-     </div>
-   </div>
-     <div>
 
-       <div>
-       <div class="row" >
-         <div class="col col-10"></div>
-         <div class="col" style="font-size: 15px;">
-         <strong style="text-align:center;"> has sent you a job request to start on {{request.startDate | date:'dd/MM/yyyy'}} at {{request.startTime | date:'hh:mm a' : 'UTC'}}.</strong>
-         </div>
-       </div>
-       <div class="row">
-         <div class="col col-50">
-           <button class="button button-icon icon-left ion-checkmark-circled" style="float: right;color: green;" ng-click="acceptEventRequest(request)">ACCEPT
-           </button>
-         </div>
-
-         <div class="col col-50">
-           <button class="button button-icon icon-left ion-close-circled" style="color: red;" ng-click="declineEventRequest(request)">DECLINE
-           </button>
-         </div>
-       </div>
-     </div>
-     </div>
-   </div>
-   <div class="col col-5"></div>
-     </div> -->
      <div class="row" style="background-color: #387ff5;padding: 0px !important;">
        <div class="col-xs-12 col-md-12 calender-buttons">
          <button class="button button-small button-positive btnLineHeight" ng-disabled="isToday()" ng-click="today()" style="font-size: 11px;background-color: royalblue;">Today</button>
          <button class="button button-small button-positive btnLineHeight" ng-click="changeMode('month')" style="font-size: 11px;background-color: royalblue;">M</button>
          <button class="button button-small button-positive btnLineHeight" ng-click="changeMode('week')" style="font-size: 11px;background-color: royalblue;">W</button>
          <button class="button button-small button-positive btnLineHeight" ng-click="changeMode('day')" style="font-size: 11px;background-color: royalblue;">D</button>
-         <!-- <button class="button button-small button-positive btnLineHeight" ng-click="goCreateEventPage()"  style="font-size: 11px;background-color: royalblue;">Create Event</button> -->
        </div>
      </div>
-      <!-- <calendar calendar-mode="mode" event-source="eventSource" ng-model="calendar.currentDate" on-double-tap="onDoubleTap(calendar.currentDate, events)"> -->
      <calendar calendar-mode="calendar.mode" event-source="calendar.eventSource" ng-model="calendar.currentDate" on-double-tap="onDoubleTap(calendar.currentDate, events)"
-      range-changed="reloadSource(startTime, endTime)" title-changed="onViewTitleChanged(title)" step="30" id="datepicker">
+      range-changed="reloadSource(startTime, endTime)"  step="30">
 
-       <!-- <calendar ng-model="calendar.currentDate" on-double-tap="onDoubleTap(calendar.currentDate, events)" calendar-mode="calendar.mode" event-source="calendar.eventSource"
-                 range-changed="reloadSource(startTime, endTime)"
-                 event-selected="onEventSelected(event)" title-changed="onViewTitleChanged(title)"
-                 step="30" id="datepicker">
-      </calendar> -->
 
   </ion-content>
 
 
 </ion-view>
+<script id="templates/modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar-positive" align-title="center">
+            <h1 class="title">Event Detail</h1>
+            <button class="button button-icon icon ion-ios-close-empty" ng-click="modal.hide()"></button>
+        </ion-header-bar>
+        <ion-content overflow-scroll="true" padding="true" class="has-header">
+          <div class="card">
+
+           <div class="item item-text-wrap">
+             <div class="row">
+               <div class="col col-40" style="font-weight: 600;">Event Title:</div>
+               <div class="col col-60"><span>{{events.title}}</span></div>
+            </div>
+            <div class="row">
+              <div class="col col-40" style="font-weight: 600;">Event Start Date:</div>
+              <div class="col col-60">{{events.selectedStartDate}}</div>
+           </div>
+           <div class="row">
+             <div class="col col-40" style="font-weight: 600;">Event End Date:</div>
+             <div class="col col-60">{{events.selectedStartDate}}</div>
+          </div>
+          <div class="row">
+            <div class="col col-40" style="font-weight: 600;">Event Description:</div>
+            <div class="col col-60">{{events.description}}</div>
+         </div>
+           </div>
+        </div>
+            <!-- <form class="list">
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Title</span>
+                  <input type="text" placeholder="Event Title" ng-model="eventTitle">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Contact Name</span>
+                    <input ion-autocomplete type="text" readonly="readonly" class="ion-autocomplete" autocomplete="off"
+                           ng-model="contactName"
+                           item-value-key="$id"
+                           item-view-value-key="profile.name"
+                           items-method="getFilterContacts(query)"
+                           items-method-value-key="items"
+                           placeholder="Enter Contact Name"
+                           items-clicked-method="contactClicked(callback)"
+                           max-selected-items="1"
+                           />
+                </label>
+                <label class="item item-input item-stacked-label">
+                      <span class="input-label">Start/Time</span>
+                      <label class="item datePicker" style="margin-right:15px;"  ng-click="openDatePicker()" name="date" ng-model="event.value">
+                          <strong ng-if="event.selectedStartDate || event.selectedStartTime">{{event.selectedStartDate | date:'MM/dd/yyyy'}} at {{event.selectedStartTime | date:'hh:mm a' : 'UTC'}}</strong>
+                      </label>
+                </label>
+                <label class="item item-input item-stacked-label">
+                      <span class="input-label">End/Time</span>
+                      <label class="item datePicker" style="margin-right:15px;" ng-model="event.value" ng-click="endDatePicker()" name="date">
+                          <strong ng-if="event.selectedEndDate || event.selectedEndTime">{{event.selectedEndDate | date:'MM/dd/yyyy'}} at {{event.selectedEndTime | date:'hh:mm a' : 'UTC'}}</strong>
+                      </label>
+                </label>
+                <div class="item item-toggle">Is repeating service?
+                  <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model="isRepeat">
+                    <div class="track">
+                      <div class="handle"></div>
+                    </div>
+                  </label>
+                </div>
+                <label class="item item-select">
+                    <span class="input-label">Repeat period</span>
+                    <select style="width:44%;" ng-model="repeatPeriod" >
+                        <option value="" selected>
+                            Select
+                        </option>
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Bi-weekly">Bi-weekly</option>
+                        <option value="Every 3 Weeks">Every 3 Weeks</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Every 2 Months">Every 2 Months</option>
+                        <option value="Every 3 Months">Every 3 Months</option>
+                        <option value="Every 6 Months">Every 6 Months</option>
+                        <option value="Every year">Every year</option>
+                    </select>
+                </label>
+                <button class="button button-block button-dark" ng-click="sendReqest(eventTitle,contactName,isRepeat,repeatPeriod,model)">Send Request</button>
+
+            </form> -->
+        </ion-content>
+    </ion-modal-view>
+</script>

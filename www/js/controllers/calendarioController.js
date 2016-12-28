@@ -1,6 +1,10 @@
-angular.module('starter').controller('calendarioController', function($scope, $state, $window,$sce,$filter, EventService) {
+angular.module('starter').controller('calendarioController', function($scope, $state, $window,$sce,$filter,$ionicModal, EventService, IonicPopupService) {
 
-
+  $scope.events = {};
+  // $scope.events.title = '';
+  // $scope.events.description = '';
+  $scope.events.selectedStartDate = '';
+  $scope.events.selectedStartTime = '';
 
   $scope.goBack = function() {
     // $window.history.back();
@@ -10,37 +14,65 @@ angular.module('starter').controller('calendarioController', function($scope, $s
     $state.go('tab.more');
   };
 
+  ////for open modal :
+  $ionicModal.fromTemplateUrl('templates/modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    console.log('before assign');
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  // Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+
+
   $scope.goCreateEventPage = function () {
 
     $state.go('tab.calendarioCreateEvent');
   };
+  // $scope.openDetailPage = function () {
+  //
+  // };
 
-  $scope.$on('$ionicView.enter', function(ev) {
-    if (ev.targetScope !== $scope)
-      return;
+  // $scope.$on('$ionicView.enter', function(ev) {
+  //   if (ev.targetScope !== $scope)
+  //     return;
 
+  $scope.loadData = function () {
     EventService.getEvents().then(function(response) {
       if (response.success = "true") {
         $scope.acceptedEvents = response.data;
-        $scope.calendar.eventSource =  createEvents([$scope.acceptedEvents]);
-      // console.log('event data  : ' + angular.toJson($scope.acceptedEvents , ' '));
+        $scope.calendar.eventSource =  createEvents($scope.acceptedEvents);
+      // console.log('event data...  : ' + angular.toJson(response.data));
+      // console.log('events data at modal : ' + angular.toJson(events , ' '));
 
       }
     }).catch(function(error) {
-        var error = JSON.parse(error);
-        IonicPopupService.alert("ERROR!!", error.msg);
+        // var error = JSON.parse(error);
+        IonicPopupService.alert("ERROR!!", error);
         console.log('error : ' + angular.toJson(error, ' '));
     });
+  };
+    $scope.loadData();
+  //
+  // });
 
-  });
-
-
+// var events = '';
   function createEvents(data) {
-    console.log('yes this function calling....'+ angular.toJson(data)  );
+    console.log('yes this function calling....'+ angular.toJson(data));
     var events = [];
     for (var i = 0; i < data.length; i += 1) {
       var startDate = new Date(data[i].startDate);
       var endDate = new Date(data[i].endDate);
+      var description = data[i].description;
 
       // var startTime = new Date(data[i].startTime);
       // var endTime = new Date(data[i].endTime);
@@ -53,23 +85,40 @@ angular.module('starter').controller('calendarioController', function($scope, $s
 
       console.log('eventStartTime ' + eventStartTime);
       console.log('eventEndTime : ' + eventEndTime);
+      console.log('description,,,, : ' + description);
 
       events.push({
-        title: data[i].title,
+        title: data[i].event,
         startTime: eventStartTime,
         endTime: eventEndTime,
+        description: data[i].description,
         allDay: false
       });
-
+      // console.log('events  data...: ' + angular.toJson(events , ' '));
     }
     return events;
   }
 
+  $scope.onDoubleTap = function(selectedTime, events,startTime, endTime) {
+    console.log('Selected time.....: ' + selectedTime + ', hasEvents: ' + (events !== undefined && events.length !== 0));
 
 
-  $scope.onViewTitleChanged = function(title) {
-    $scope.viewTitle = title;
+    $scope.events.selectedStartDate = selectedTime;
+    $scope.events.selectedStartTime = selectedTime;
+    console.log('events at onDoubleTap : ' + angular.toJson(events , ' '));
+    $scope.modal.show();
+      // if () {
+        // $state.go('tab.calendarioCreateEvent', {
+        //   'event_obj': JSON.stringify($scope.acceptedEvents)
+        // });
+      // }
+
   };
+
+
+  // $scope.onViewTitleChanged = function(title) {
+  //   $scope.viewTitle = title;
+  // };
 // for calender :
 
 $scope.calendar = {};
@@ -100,16 +149,6 @@ $scope.isToday = function() {
   return today.getTime() === currentCalendarDate.getTime();
 };
 
-$scope.onDoubleTap = function(selectedTime, events) {
-  console.log('Selected time.....: ' + selectedTime + ', hasEvents: ' + (events !== undefined && events.length !== 0));
-  $scope.selectedStartDate = selectedTime;
-  $scope.selectedStartTime = selectedTime;
-  console.log('events : ' + events);
-// $state.go('tab.calendarioCreateEvent');
-$state.go('tab.calendarioCreateEvent', {
-  'event_obj': JSON.stringify($scope.acceptedEvents)
-});
-};
 
 
 

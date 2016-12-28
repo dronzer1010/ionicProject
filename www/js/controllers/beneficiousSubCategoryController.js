@@ -14,7 +14,7 @@ angular.module('starter').controller('beneficiousSubCategoryController', functio
       $scope.subCategories = [];
       if (response.success = "true") {
           $scope.subCategories = response.data;
-          // console.log('$scope.subCategories : ' +  angular.toJson(response.data, ' ') );
+          console.log('$scope.subCategories : ' +  angular.toJson(response.data, ' ') );
       }
     }).catch(function(error) {
         var error = JSON.parse(error);
