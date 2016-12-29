@@ -20,7 +20,38 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    FCMPlugin.getToken(
+        function(token){
+          console.log('token : ' + JSON.stringify(token));
+          console.log('token1 : ' + token);
+          alert(token);
+        },
+        function(err){
+          console.log('error retrieving token: ' + err);
+        }
+      );
   });
+
+  FCMPlugin.onNotification(
+      function(data){
+        if(data.wasTapped){
+          //Notification was received on device tray and tapped by the user.
+          console.log('tappded Data : ' + JSON.stringify(data));
+          alert( JSON.stringify(data) );
+        }else{
+          //Notification was received in foreground. Maybe the user needs to be notified.
+          console.log('foreground data Data : ' + JSON.stringify(data));
+          alert( JSON.stringify(data) );
+        }
+      },
+      function(msg){
+        console.log('onNotification callback successfully registered: ' + msg);
+      },
+      function(err){
+        console.log('Error registering onNotification callback: ' + err);
+      }
+    );
 })
 .config(function($ionicConfigProvider) {
     $ionicConfigProvider.tabs.position('bottom');
