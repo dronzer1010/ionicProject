@@ -69,8 +69,8 @@
 }*/
 
 .tabs-positive > .tabs, .tabs.tabs-positive {
-    border-color: #ffdd00;
-    background-color: #ffdd00;
+    border-color: #ffdd00 !important;
+    background-color: #ffdd00 !important;
     /*background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);*/
     color: #00428a;
 }
