@@ -15,6 +15,13 @@
   </ion-nav-buttons>
 
   <ion-content>
+    <div>
+        <div class="coupenHeaderStyle">Contactos</div>
+        <div>
+            <img src="img/contactos .jpg" class="coupenImgStyle">
+       </div>
+   </div>
+   <div class="formularioDivStyle"></div>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" ng-repeat="contactData in contactosData" ng-click="goContactosDetailPage(contactData)" style="border-bottom: 1px solid #00428a;" type="item-text-wrap" ng-click="goBeneficiousSubCategoryPage(cat._id)">
         <img ng-src="http://banistmo-backend.herokuapp.com/{{contactData.image}}" class="imgStyle" ng-if="!!contactData.image">

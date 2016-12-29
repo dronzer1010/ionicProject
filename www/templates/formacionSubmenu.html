@@ -8,17 +8,24 @@
     <img class="headerImgStyle" src="img/logo.png">
   </ion-nav-title>
   <ion-nav-buttons side="left">
-    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
       <i class="icon ion-arrow-left-b"></i>
     </button>
   </ion-nav-buttons>
 
   <ion-nav-buttons side="right">
     <ion-buttons>
-      <button class="button button-icon icon ion-navicon-round" style="color: #00428a;"></button>
+      <button class="button button-icon icon ion-navicon-round" style="color: #00428a;" ng-click="gomenuPage()"></button>
     </ion-buttons>
   </ion-nav-buttons>
   <ion-content>
+    <div>
+        <div class="coupenHeaderStyle">Entrenamiento</div>
+        <div>
+            <img src="img/entrenamiento1.jpg" class="coupenImgStyle">
+       </div>
+   </div>
+   <div class="formularioDivStyle"></div>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar"  type="item-text-wrap">
         <img src="img/ionic.png" class="imgStyle">

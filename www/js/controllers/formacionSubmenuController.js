@@ -8,5 +8,7 @@ angular.module('starter').controller('formacionSubmenuController', function($sco
     $state.go('app.beneficiosDetailPage');
   };
 
-
+  $scope.gomenuPage = function () {
+    $state.go('tab.more');
+  };
 });
