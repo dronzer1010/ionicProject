@@ -64,20 +64,17 @@
              </label>
          </div>
      </label>
-     
+
       <label class="item item-input item-select">
           <div class="input-label" style="font-weight: 700;">
             Regreso a su puesto
           </div>
-          <select>
-            <option>Blue</option>
-            <option ng-selected="selected">Green</option>
-            <option>Red</option>
+          <select ng-options="obj.name as obj.username for obj in allUsers" ng-model="name">
+
         </select>
       </label>
 
-
-         <label class="item-input item-stacked-label item item-text-wrap">
+         <label class="item-input item-stacked-label item item-text-wrap" >
            <span class="" style="font-weight: 700;">Comentarios</span>
              <div class="row" style="padding-left:0px;">
                  <label class="col col-100 item item-icon-left">
@@ -87,7 +84,7 @@
          </label>
 
          <div class="padding">
-             <button style="margin:0;"  class="button button-energized  button-block">
+             <button style="margin:0;"  class="button button-energized  button-block" ng-click="submit(incioDateValue,finDateValue,regresoDateValue,name,comentariosData)">
                  Envair
              </button>
          </div>

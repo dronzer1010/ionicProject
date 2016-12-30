@@ -7,7 +7,7 @@ angular.module('starter').controller('loginController', function($scope, $state,
     console.log('$scope.userData..... : ' + $scope.userData);
     // Perform the login action when the user submits the login form
     $scope.Login = function() {
-      
+
         var loginObj = {
             userName: $scope.loginData.employId,
             password: $scope.loginData.password,
@@ -23,7 +23,7 @@ angular.module('starter').controller('loginController', function($scope, $state,
                   console.log('respData.data.topic[i] : ' + respData.data.topic[i]);
                   FCMPlugin.subscribeToTopic(respData.data.topic[i]);
                 }
-              Session.setUser(response);
+              Session.setUser(response.data);
               $scope.userData = Session.getUser();
               // console.log('$scope.userData..... : ' + $scope.userData);
                 $state.go('tab.more');
