@@ -1,6 +1,7 @@
 angular.module('starter').controller('formacionSubmenuController', function($scope, $state, $window) {
 
   $scope.goBack = function() {
+    // $state.go('tab.more');
     $window.history.back();
   };
 
@@ -10,5 +11,8 @@ angular.module('starter').controller('formacionSubmenuController', function($sco
 
   $scope.gomenuPage = function () {
     $state.go('tab.more');
+  };
+  $scope.goInduccionPage = function () {
+    $state.go('tab.induccion');
   };
 });

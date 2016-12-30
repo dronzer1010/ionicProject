@@ -24,7 +24,9 @@ angular.module('starter')
             },
             data: {
                 username: loginObj.userName,
-                password: loginObj.password
+                password: loginObj.password,
+                platformName: loginObj.platformName,
+                deviceToken:loginObj.deviceToken
             }
         }).success(function(body, status, headers, config) {
             console.log("login body : " + JSON.stringify(body));

@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.rCalendar', 'ion-datetime-picker'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$rootScope,Session,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,37 +21,54 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    FCMPlugin.getToken(
-        function(token){
-          console.log('token : ' + JSON.stringify(token));
-          console.log('token1 : ' + token);
-          alert(token);
-        },
-        function(err){
-          console.log('error retrieving token: ' + err);
-        }
-      );
+    // FCMPlugin.getToken(
+    //     function(token){
+    //       console.log('token : ' + JSON.stringify(token));
+    //       console.log('token1 : ' + token);
+    //       alert(token);
+    //     },
+    //     function(err){
+    //       console.log('error retrieving token: ' + err);
+    //     }
+    //   );
   });
 
-  FCMPlugin.onNotification(
-      function(data){
-        if(data.wasTapped){
-          //Notification was received on device tray and tapped by the user.
-          console.log('tappded Data : ' + JSON.stringify(data));
-          alert( JSON.stringify(data) );
-        }else{
-          //Notification was received in foreground. Maybe the user needs to be notified.
-          console.log('foreground data Data : ' + JSON.stringify(data));
-          alert( JSON.stringify(data) );
-        }
-      },
-      function(msg){
-        console.log('onNotification callback successfully registered: ' + msg);
-      },
-      function(err){
-        console.log('Error registering onNotification callback: ' + err);
-      }
-    );
+  // FCMPlugin.onNotification(
+  //     function(data){
+  //       if(data.wasTapped){
+  //         //Notification was received on device tray and tapped by the user.
+  //         console.log('tappded Data : ' + JSON.stringify(data));
+  //         alert( JSON.stringify(data) );
+  //       }else{
+  //         //Notification was received in foreground. Maybe the user needs to be notified.
+  //         console.log('foreground data Data : ' + JSON.stringify(data));
+  //         alert( JSON.stringify(data) );
+  //       }
+  //     },
+  //     function(msg){
+  //       console.log('onNotification callback successfully registered: ' + msg);
+  //     },
+  //     function(err){
+  //       console.log('Error registering onNotification callback: ' + err);
+  //     }
+  //   );
+
+  //////for rootscope :
+  // $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam) {
+  //   console.log('tostate : ' + angular.toJson(toState, ' '));
+  //
+  //   console.log('Session.isLoggedIn() : ' + Session.isLoggedIn());
+  //   if (Session.isLoggedIn() === false) {
+  //     // event.preventDefault();
+  //     console.log('yes going to welcome');
+  //     // $state.go('tab.beneficious');
+  //     event.preventDefault();
+  //     return;
+  //   }
+  // });
+
+
+
 })
 .config(function($ionicConfigProvider) {
     $ionicConfigProvider.tabs.position('bottom');
