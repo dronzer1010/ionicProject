@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "angular-ui-calendar": "^1.0.2",
-    "ion-datetime-picker": "^0.4.4"
+    "ion-datetime-picker": "^0.4.4",
+    "ngCordova": "^0.1.27-alpha"
   }
 }

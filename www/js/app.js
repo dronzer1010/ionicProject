@@ -5,12 +5,16 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.rCalendar', 'ion-datetime-picker'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova', 'ui.rCalendar', 'ion-datetime-picker'])
 
-.run(function($ionicPlatform,$rootScope,Session,$state) {
+.run(function($ionicPlatform, $cordovaDevice, $rootScope, Session, $state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
+    if(window.cordova && $cordovaDevice){
+      AppSettings.platform = $cordovaDevice.getPlatform(); //Update platform type in the constant object
+    }
+
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
@@ -21,16 +25,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    // FCMPlugin.getToken(
-    //     function(token){
-    //       console.log('token : ' + JSON.stringify(token));
-    //       console.log('token1 : ' + token);
-    //       alert(token);
-    //     },
-    //     function(err){
-    //       console.log('error retrieving token: ' + err);
-    //     }
-    //   );
+    FCMPlugin.getToken(
+        function(token){
+          console.log('token : ' + JSON.stringify(token));
+          console.log('token1 : ' + token);
+          alert(token);
+          AppSettings.deviceToken = token;
+        },
+        function(err){
+          console.log('error retrieving token: ' + err);
+        }
+      );
   });
 
   // FCMPlugin.onNotification(
