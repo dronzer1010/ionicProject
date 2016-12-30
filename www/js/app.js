@@ -38,41 +38,41 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       );
   });
 
-    FCMPlugin.onNotification(
-        function(data){
-          if(data.wasTapped){
-            //Notification was received on device tray and tapped by the user.
-            console.log('tappded Data : ' + JSON.stringify(data));
-            alert( JSON.stringify(data) );
-          }else{
-            //Notification was received in foreground. Maybe the user needs to be notified.
-            console.log('foreground data Data : ' + JSON.stringify(data));
-            alert( JSON.stringify(data) );
-          }
-        },
-        function(msg){
-          console.log('onNotification callback successfully registered: ' + msg);
-        },
-        function(err){
-          console.log('Error registering onNotification callback: ' + err);
-        }
-      );
+  // FCMPlugin.onNotification(
+  //     function(data){
+  //       if(data.wasTapped){
+  //         //Notification was received on device tray and tapped by the user.
+  //         console.log('tappded Data : ' + JSON.stringify(data));
+  //         alert( JSON.stringify(data) );
+  //       }else{
+  //         //Notification was received in foreground. Maybe the user needs to be notified.
+  //         console.log('foreground data Data : ' + JSON.stringify(data));
+  //         alert( JSON.stringify(data) );
+  //       }
+  //     },
+  //     function(msg){
+  //       console.log('onNotification callback successfully registered: ' + msg);
+  //     },
+  //     function(err){
+  //       console.log('Error registering onNotification callback: ' + err);
+  //     }
+  //   );
 
   //for rootscope :
-  $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam) {
-    // console.log('tostate : ' + angular.toJson(toState, ' '));
-    // console.log('Session.isLoggedIn() : ' + Session.isLoggedIn());
-    if (Session.isLoggedIn() === false) {
-      $location.path('/tab/login');
-      // $state.go('tab.more');
-      // event.preventDefault();
-      return;
-    }else {
-      // $state.go('tab.beneficious');
-      $location.path('/tab/more');
-      console.log('login true called');
-    }
-  });
+  // $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam) {
+  //   // console.log('tostate : ' + angular.toJson(toState, ' '));
+  //   // console.log('Session.isLoggedIn() : ' + Session.isLoggedIn());
+  //   if (Session.isLoggedIn() === false) {
+  //     $location.path('/tab/login');
+  //     // $state.go('tab.more');
+  //     // event.preventDefault();
+  //     return;
+  //   }else {
+  //     // $state.go('tab.beneficious');
+  //     $location.path('/tab/more');
+  //     console.log('login true called');
+  //   }
+  // });
 
 
 })

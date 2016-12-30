@@ -23,7 +23,7 @@ angular.module('starter').controller('loginController', function($scope, $state,
                   console.log('respData.data.topic[i] : ' + respData.data.topic[i]);
                   FCMPlugin.subscribeToTopic(respData.data.topic[i]);
                 }
-              Session.setUser(response.data);
+              Session.setUser(response);
               $scope.userData = Session.getUser();
               // console.log('$scope.userData..... : ' + $scope.userData);
                 $state.go('tab.more');
