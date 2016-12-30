@@ -25,17 +25,7 @@ function SessionFunction($rootScope, $ionicHistory) {
       }
     },
     cache: {},
-    // reset: function() {
-    //   var newSession = {};
-    //   newSession.user = null;
-    //   newSession.guestUser = null;
-    //   newSession.isGuest = Session.isGuest;
-    //   newSession.getUserId = Session.getUserId;
-    //   newSession.isLoggedIn = Session.isLoggedIn;
-    //   newSession.reset = Session.reset;
-    //   newSession.cache = {};
-    //   angular.copy(newSession, Session);
-    // }
+
   };
   return Session;
 }

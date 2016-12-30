@@ -1,4 +1,7 @@
-angular.module('starter').controller('moreController', function($scope, $state, $window, $ionicModal) {
+angular.module('starter').controller('moreController', function($scope, $state, $window, $ionicModal,Session) {
+
+  $scope.userData = Session.getUser();
+  // console.log('$scope.userData : ' + $scope.userData);
 
   $scope.goBack = function() {
     $window.history.back();
@@ -23,6 +26,11 @@ $scope.goCalendarioPage = function () {
 };
 $scope.goFormularioPage = function () {
   $state.go('tab.formulario');
+};
+$scope.logout = function () {
+  $window.localStorage.clear();
+  Session.setUser(null);
+  $state.go('login');
 };
 
 ////for openmode :

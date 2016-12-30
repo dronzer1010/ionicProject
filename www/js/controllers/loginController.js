@@ -1,25 +1,13 @@
-angular.module('starter').controller('loginController', function($scope, $state, $ionicModal, $timeout, UserService, IonicPopupService,$cordovaDevice) {
+angular.module('starter').controller('loginController', function($scope, $state, $ionicModal, $timeout, UserService, IonicPopupService, Session, $cordovaDevice) {
 
     // Form data for the login modal
     $scope.loginData = {};
 
+    $scope.userData = Session.getUser();
+    console.log('$scope.userData..... : ' + $scope.userData);
     // Perform the login action when the user submits the login form
     $scope.Login = function() {
-      // var tokenId = token;
-      // FCMPlugin.getToken(
-      //     function(token){
-      //       console.log('token : ' + JSON.stringify(token));
-      //       console.log('token1 : ' + token);
-      //       alert(token);
-      //
-      //       console.log('tokenId : ' + tokenId);
-      //     },
-      //     function(err){
-      //       console.log('error retrieving token: ' + err);
-      //     }
-      //   );
-        // var platform = 'Web Browser';
-      var  platform = $cordovaDevice.getPlatform();
+      
         var loginObj = {
             userName: $scope.loginData.employId,
             password: $scope.loginData.password,
@@ -30,6 +18,14 @@ angular.module('starter').controller('loginController', function($scope, $state,
 
         UserService.login(loginObj).then(function(response) {
             if (response.success = "true") {
+                var respData = JSON.parse(response);
+                for (var i = 0; i < respData.data.topic.length; i++) {
+                  console.log('respData.data.topic[i] : ' + respData.data.topic[i]);
+                  FCMPlugin.subscribeToTopic(respData.data.topic[i]);
+                }
+              Session.setUser(response);
+              $scope.userData = Session.getUser();
+              // console.log('$scope.userData..... : ' + $scope.userData);
                 $state.go('tab.more');
             } else {
                 IonicPopupService.alert("Success", "User Login successfully.");
