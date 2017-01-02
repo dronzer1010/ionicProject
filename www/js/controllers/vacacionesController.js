@@ -13,11 +13,11 @@ angular.module('starter').controller('vacacionesController', function($scope, $s
       return;
 
     VacacionesService.getAllUsers().then(function(response) {
-      $scope.allUsers = [];
+      // $scope.allUsers ={};
       if (response.success = "true") {
         // console.log('yes true');
           $scope.allUsers = response.data;
-          console.log('$scope.allUsers : ' +  angular.toJson($scope.allUsers, ' ') );
+          // console.log('$scope.allUsers : ' +  angular.toJson($scope.allUsers, ' ') );
       }
     }).catch(function(error) {
         var error = JSON.parse(error);
@@ -26,22 +26,24 @@ angular.module('starter').controller('vacacionesController', function($scope, $s
     });
 
   });
+
+
   var userData = Session.getUser();
   var AuthorizationData = JSON.parse(userData);
-  console.log('$scope.userData : ' + AuthorizationData.data.auth_token);
+  // console.log('$scope.userData : ' + angular.toJson(AuthorizationData.data.auth_token , ' '));
 
-  $scope.submit = function (incioDateValue,finDateValue,regresoDateValue,name,comentariosData) {
-    console.log('$scope.incioDateValue : ' + incioDateValue);
-    console.log('$scope.finDateValue : ' + finDateValue);
-    console.log('$scope.regresoDateValue : ' + regresoDateValue);
-    console.log('$scope.selectedName : ' + name);
-    console.log('$scope.description : ' + comentariosData);
+  $scope.submit = function (incioDateValue,finDateValue,regresoDateValue,reportsToId,comentariosData) {
+    // console.log('$scope.incioDateValue : ' + incioDateValue);
+    // console.log('$scope.finDateValue : ' + finDateValue);
+    // console.log('$scope.regresoDateValue : ' + regresoDateValue);
+    // console.log('$scope.selectedName : ' + reportsToId);
+    // console.log('$scope.description : ' + comentariosData);
     var leaveObj = {
         startsOn: incioDateValue,
         endsOn: finDateValue,
         joinsOn: regresoDateValue,
-        reportsTo: name,
-        vacationType: comentariosData,
+        reportsTo: reportsToId,
+        vacationType: 'vacation',
         Authorization : AuthorizationData.data.auth_token
     }
     console.log('leaveObj : ' + angular.toJson(leaveObj , ' '));
@@ -55,7 +57,7 @@ angular.module('starter').controller('vacacionesController', function($scope, $s
         }
     }).catch(function(error) {
         var error = JSON.parse(error);
-        IonicPopupService.alert("ERROR!!", error);
+        IonicPopupService.alert("ERROR!!", 'Error at apply for leave.');
         console.log('error : ' + angular.toJson(error, ' '));
     });
   };
