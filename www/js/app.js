@@ -59,20 +59,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   //   );
 
   //for rootscope :
-  // $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam) {
-  //   // console.log('tostate : ' + angular.toJson(toState, ' '));
-  //   // console.log('Session.isLoggedIn() : ' + Session.isLoggedIn());
-  //   if (Session.isLoggedIn() === false) {
-  //     $location.path('/tab/login');
-  //     // $state.go('tab.more');
-  //     // event.preventDefault();
-  //     return;
-  //   }else {
-  //     // $state.go('tab.beneficious');
-  //     $location.path('/tab/more');
-  //     console.log('login true called');
-  //   }
-  // });
+  $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam) {
+    // console.log('tostate : ' + angular.toJson(toState, ' '));
+    // console.log('Session.isLoggedIn() : ' + Session.isLoggedIn());
+    if (Session.isLoggedIn() === false) {
+      $location.path('/tab/login');
+      // $state.go('tab.more');
+      // event.preventDefault();
+      return;
+    }else {
+      // $state.go('tab.beneficious');
+      $location.path('/tab/more');
+      console.log('login true called');
+    }
+  });
 
 
 })
@@ -240,6 +240,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         'tab-more': {
           templateUrl: 'templates/calendarioCreateEvent.html',
           controller: 'calendarioCreateEventController'
+        }
+      }
+    })
+
+    .state('tab.weather', {
+      url: '/weather',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/weather.html',
+          controller: 'weatherController'
         }
       }
     })

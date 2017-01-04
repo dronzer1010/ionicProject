@@ -27,6 +27,12 @@ $scope.goCalendarioPage = function () {
 $scope.goFormularioPage = function () {
   $state.go('tab.formulario');
 };
+
+$scope.goWeatherPage = function () {
+  $state.go('tab.weather');
+};
+
+
 $scope.logout = function () {
   $window.localStorage.clear();
   Session.setUser(null);
