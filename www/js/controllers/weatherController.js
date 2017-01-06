@@ -1,4 +1,4 @@
-angular.module('starter').controller('weatherController', function($scope, $state, $window, WeatherService) {
+angular.module('starter').controller('weatherController', function($scope, $state, $window, WeatherService, WeatherFactory) {
 
   $scope.goBack = function() {
     // $state.go('tab.more');
@@ -9,6 +9,34 @@ angular.module('starter').controller('weatherController', function($scope, $stat
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };
+   $scope.date = new Date();
+
+
+  $scope.weather = WeatherFactory.getWeather();
+  console.log('$scope.weather : ' + angular.toJson($scope.weather , ' '));
+
+
+  $scope.$on('$ionicView.enter', function(ev) {
+    if (ev.targetScope !== $scope)
+      return;
+
+    // WeatherFactory.getWeather().then(function(response) {
+    //   $scope.weather = response;
+    //   console.log('$scope.weather : ' + angular.toJson($scope.weather , ' '));
+    //   // if (!!$scope.weather) {
+    //   //     var date = new Date();
+    //   //     date.setDate(date.getDate() + $scope.weather.date);
+    //   //     console.log('date : ' + date);
+    //   //     return date;
+    //   //   }
+    // }).catch(function(error) {
+    //     var error = JSON.parse(error);
+    //     IonicPopupService.alert("ERROR!!", error.msg);
+    //     console.log('error : ' + angular.toJson(error, ' '));
+    // });
+
+  });
+
 
 
   // true if use celsius, false if use fahrenheit

@@ -81,9 +81,24 @@
     </button>
   </ion-nav-buttons>
 
-  <ion-content class="stable-bg weather weather-2">
 
-    <ion-slide-box on-slide-changed="changeTitle(cities[$index])">
+
+  <ion-content class="stable-bg weather weather-2">
+    <div>
+        <div class="coupenHeaderStyle">Weather</div>
+        <div>
+            <img src="img/weather.png" class="coupenImgStyle">
+       </div>
+   </div>
+
+    <h2>{{ weather.city }}</h2>
+    <div style="margin-left :50px !important;">
+     <weather-day
+         ng-repeat="day in  weather.days track by $index" day="day">
+     </weather-day>
+    </div>
+
+    <!-- <ion-slide-box on-slide-changed="changeTitle(cities[$index])">
 
       <ion-slide ng-repeat="city in cities" style="height: 435px !important;">
         <div class="weather-header padding-top text-center light-bg"  style="background: url('img/weather/{{ city.id }}.jpg');height:240px;">
@@ -136,7 +151,7 @@
 
         </div>
       </ion-slide>
-    </ion-slide-box>
+    </ion-slide-box> -->
 
   </ion-content>
 
