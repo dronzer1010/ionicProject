@@ -1,4 +1,4 @@
-angular.module('starter').controller('noticiasPageController', function($scope, $state, $window,$sce, NoticiasPageService) {
+angular.module('starter').controller('noticiasPageController', function($scope, $state, $window,$sce, NoticiasPageService, IonicPopupService) {
 
   $scope.goBack = function() {
     $window.history.back();

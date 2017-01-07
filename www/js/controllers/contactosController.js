@@ -1,4 +1,4 @@
-angular.module('starter').controller('contactosController', function($scope, $state, $window,$sce, ContactosService) {
+angular.module('starter').controller('contactosController', function($scope, $state, $window,$sce, ContactosService,IonicPopupService) {
 
   $scope.goBack = function() {
     // $window.history.back();

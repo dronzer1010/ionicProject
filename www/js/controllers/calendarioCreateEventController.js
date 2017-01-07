@@ -1,4 +1,4 @@
-angular.module('starter').controller('calendarioCreateEventController', function($scope, $state, $window,$sce,$filter, EventService, $stateParams) {
+angular.module('starter').controller('calendarioCreateEventController', function($scope, $state, $window,$sce,$filter, EventService, $stateParams,IonicPopupService) {
 
 
 

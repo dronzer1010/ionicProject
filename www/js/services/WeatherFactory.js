@@ -12,11 +12,15 @@ angular.module('starter')
 
 .factory('WeatherFactory', function($http, $q) {
     return {
-      getWeather: function() {
+
+      getWeather: function(searchText) {
+        // console.log('searchText at factory : ' + searchText);
+
         // var def = $q.defer();
         var weather = {},
             i = 0;
-            $http.jsonp('http://api.openweathermap.org/data/2.5/forecast/daily?q=america&mode=json&units=metric&cnt=7&callback=JSON_CALLBACK&APPID=f9dbd911bc01df1d9ce563b2ba4d3209').success(function(data) {
+            $http.jsonp('http://api.openweathermap.org/data/2.5/forecast/daily?q='+searchText+'&mode=json&units=metric&cnt=7&callback=JSON_CALLBACK&APPID=f9dbd911bc01df1d9ce563b2ba4d3209').success(function(data) {
+
               // console.log('weather data : ' + angular.toJson(data , ' '));
             if (data) {
             	if (data.list) {

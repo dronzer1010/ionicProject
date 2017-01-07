@@ -14,7 +14,6 @@ angular.module('starter')
               return date;
             }
         },
-        template: '<div class="col col-25" style="float:left;margin:2px 2px 2px 2px;background-color: rgb(0, 66, 138);">{{ getDate() | date: "EEE d"}}<h5>{{ day.temp.current | formatTemp}}</h5>wind: {{day.wind }}<br/>  <weather-icon sky="{{ day.sky }}"></weather-icon></div>'
-        // template: '<div style="float:left;">{{ getDate() | date: "EEEE d"}}<h5>Current: {{ day.temp.current | formatTemp}}</h5>min: {{ day.temp.min  | formatTemp}}, <br/> max: {{ day.temp.max  | formatTemp}},<br/> wind: {{day.wind }}<br/>  <weather-icon sky="{{ day.sky }}"></weather-icon></div>'
+        template: '<div class="col col-20" style="margin:2px 2px 2px 2px;background-color: #305b9e;border-radius: 8px;color: white;">{{ getDate() | date: "EEE d"}}<h5 style="color: white;">{{ day.temp.current | formatTemp}}</h5 style="color: white;">wind: {{day.wind }}<br/>  <weather-icon sky="{{ day.sky }}"></weather-icon></div>'
     };
 });

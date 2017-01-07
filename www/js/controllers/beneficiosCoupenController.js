@@ -1,4 +1,4 @@
-angular.module('starter').controller('beneficiosCoupenController', function($scope, $state, $window, CouponService, $stateParams) {
+angular.module('starter').controller('beneficiosCoupenController', function($scope, $state, $window, CouponService, $stateParams, IonicPopupService) {
 
   $scope.subCatId = $stateParams.subCatId;
   // console.log('$scope.subCatId.. : ' + $scope.subCatId);

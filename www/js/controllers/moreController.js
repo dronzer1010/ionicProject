@@ -8,28 +8,35 @@ angular.module('starter').controller('moreController', function($scope, $state, 
   };
 $scope.goFormacionSubMenu = function () {
   $state.go('tab.formacionSubmenu');
+  $scope.modal.hide();
 };
 $scope.goBeneficiousSubmenu = function () {
   $state.go('tab.beneficious');
+  $scope.modal.hide();
 };
 
 $scope.goNoticiasPage = function () {
   $state.go('tab.noticiasPage');
+  $scope.modal.hide();
 };
 
 $scope.goContactosPage = function () {
   $state.go('tab.contactos');
+  $scope.modal.hide();
 };
 
 $scope.goCalendarioPage = function () {
   $state.go('tab.calendario');
+  $scope.modal.hide();
 };
 $scope.goFormularioPage = function () {
   $state.go('tab.formulario');
+  $scope.modal.hide();
 };
 
 $scope.goWeatherPage = function () {
   $state.go('tab.weather');
+  $scope.modal.hide();
 };
 
 
@@ -37,6 +44,7 @@ $scope.logout = function () {
   $window.localStorage.clear();
   Session.setUser(null);
   $state.go('login');
+  $scope.modal.hide();
 };
 
 ////for openmode :

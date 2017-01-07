@@ -1,20 +1,20 @@
-angular.module('starter').controller('weatherController', function($scope, $state, $window, WeatherService, WeatherFactory) {
+angular.module('starter').controller('weatherController', function($scope, $state, $window, WeatherService, WeatherFactory, IonicPopupService) {
 
   $scope.goBack = function() {
     // $state.go('tab.more');
     $window.history.back();
   };
 
-
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };
    $scope.date = new Date();
 
-
+   $scope.searchCity = function (searchText) {
+     $scope.city = searchText;
+     $scope.weather = WeatherFactory.getWeather(searchText);
+   };
   $scope.weather = WeatherFactory.getWeather();
-  console.log('$scope.weather : ' + angular.toJson($scope.weather , ' '));
-
 
   $scope.$on('$ionicView.enter', function(ev) {
     if (ev.targetScope !== $scope)

@@ -1,4 +1,4 @@
-angular.module('starter').controller('beneficiousSubCategoryController', function($scope, $state, $window,$stateParams, CouponService) {
+angular.module('starter').controller('beneficiousSubCategoryController', function($scope, $state, $window,$stateParams, CouponService, IonicPopupService) {
 
   $scope.catId = $stateParams.catId;
   $scope.goBack = function() {

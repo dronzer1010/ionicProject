@@ -25,17 +25,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    FCMPlugin.getToken(
-        function(token){
-
-          console.log('token : ' + token);
-
-          AppSettings.deviceToken = token;
-        },
-        function(err){
-          console.log('error retrieving token: ' + err);
-        }
-      );
+    // FCMPlugin.getToken(
+    //     function(token){
+    //
+    //       console.log('token : ' + token);
+    //
+    //       AppSettings.deviceToken = token;
+    //     },
+    //     function(err){
+    //       console.log('error retrieving token: ' + err);
+    //     }
+    //   );
   });
 
   // FCMPlugin.onNotification(
@@ -92,7 +92,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html',
+    controller: 'moreController'
   })
 
   // Each tab has its own nav history stack:

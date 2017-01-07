@@ -1,4 +1,4 @@
-angular.module('starter').controller('beneficiousController', function($scope, $state, $window, CouponService) {
+angular.module('starter').controller('beneficiousController', function($scope, $state, $window, CouponService,IonicPopupService) {
 
   $scope.$on('$ionicView.enter', function(ev) {
     if (ev.targetScope !== $scope)
@@ -13,7 +13,7 @@ angular.module('starter').controller('beneficiousController', function($scope, $
       }
     }).catch(function(error) {
         var error = JSON.parse(error);
-        IonicPopupService.alert("ERROR!!", error.msg);
+        IonicPopupService.alert("ERROR!!", error);
         console.log('error : ' + angular.toJson(error, ' '));
     });
 

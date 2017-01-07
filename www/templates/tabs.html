@@ -8,7 +8,7 @@ navigation history that also transitions its views in and out.
 
   <!-- Beneficious Tab -->
   <!-- <ion-tab title="Beneficios" icon-off="ion-bookmark" icon-on="ion-bookmark" href="#/tab/beneficious" > -->
-    <ion-tab title="Beneficios" icon-off="ion-bookmark" icon-on="ion-bookmark" href="#/tab/beneficious" >
+    <ion-tab title="Convenios" icon-off="ion-bookmark" icon-on="ion-bookmark" href="#/tab/beneficious" >
 
     <ion-nav-view name="tab-beneficious"></ion-nav-view>
   </ion-tab>
@@ -19,7 +19,7 @@ navigation history that also transitions its views in and out.
   </ion-tab>
 
   <!-- Chats Tab -->
-  <ion-tab title="" icon-off="ion-more" icon-on="ion-more" href="#/tab/more">
+  <ion-tab title="" icon-off="ion-more" icon-on="ion-more" href="#/tab/more" ng-click="openModal()">
     <ion-nav-view name="tab-more"></ion-nav-view>
   </ion-tab>
 
@@ -35,3 +35,61 @@ navigation history that also transitions its views in and out.
 
 
 </ion-tabs>
+
+<script id="templates/modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar-positive" align-title="center" style="background-color: #ffdd00;">
+            <h1 class="title" style="font-weight: 700;color: #00428a;font-size: 17px;">Menu Content</h1>
+            <button class="button button-icon icon ion-ios-close-empty" ng-click="modal.hide()" style="color: #00428a;"></button>
+        </ion-header-bar>
+        <ion-content style="background-color: #ffdd00;">
+          <!-- <div class="row">
+            <div class="col col-33" style="text-align: center;">
+              <i class="icon ion-social-dribbble" style="font-size: 30px;"></i><br/>
+              <span>Convenios</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;">Alertas</div>
+            <div class="col col-33" style="text-align: center;">Clima</div>
+          </div> -->
+
+          <ion-list >
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goBeneficiousSubmenu()">
+              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Beneficios</h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goFormacionSubMenu()">
+              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">  Formacion y entrenamiento</h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goFormularioPage()">
+              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Formularios</h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" >
+              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Vacantes internas </h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goContactosPage()">
+              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Contactos </h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goNoticiasPage()">
+
+              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;" >Noticias </h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
+              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Alertas </h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goCalendarioPage()">
+              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Calendario </h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goWeatherPage()">
+              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Clima </h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
+              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Cuenta </h2>
+            </ion-item>
+            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="logout()">
+              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Logout </h2>
+            </ion-item>
+          </ion-list>
+
+        </ion-content>
+    </ion-modal-view>
+</script>

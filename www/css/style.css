@@ -81,7 +81,8 @@
 }
 
     #homecontent {
-        background-image: url(../img/home_1.png) !important;
+        /*background-image: url(../img/home_1.png) !important;*/
+        background-image: url(../img/PORTDADA1.jpg) !important;
         -webkit-background-size: cover !important;
         -moz-background-size: cover !important;
         background-size: cover !important;
@@ -355,4 +356,59 @@
       background: rgba(0, 0, 0, 0.6);
     }
   }
+}
+
+.wide-as-needed {
+  overflow: scroll;
+  white-space: nowrap;
+}
+.scroll {
+  min-width: 100%;
+}
+.bar.bar-loading {
+  display: block;
+  height: 24px;
+
+  /* starts right below a normal header */
+  top: 44px;
+
+  /* make the text centered vertically and horizontally */
+  text-align: center;
+  padding: 0;
+  line-height: 24px;
+
+  /* transition 'sliding down' (check below)*/
+  -webkit-transition: 200ms all;
+}
+
+
+/*
+ * make the content's top changes animate.
+ * might not always look good, but looks
+ * good when our loader is added & removed
+ */
+.has-header {
+  -webkit-transition: 200ms top;
+}
+.has-header.has-loading {
+  /* 44px (header) + 24px */
+  top: 68px;
+}
+
+/* make loading bar slide up/down */
+.bar-loading.ng-enter,
+.bar-loading.ng-leave.ng-leave-active {
+  height: 0;
+  border-width: 0px;
+}
+.bar-loading.ng-enter.ng-enter-active,
+.bar-loading.ng-leave {
+  height: 24px;
+  border-width: 1px;
+}
+@media(min-width:320px) and (max-width:736px){
+	.weather-scroll {
+		Width:50%;
+		overflow-x: scroll;
+	}
 }
