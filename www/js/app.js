@@ -25,17 +25,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    // FCMPlugin.getToken(
-    //     function(token){
-    //
-    //       console.log('token : ' + token);
-    //
-    //       AppSettings.deviceToken = token;
-    //     },
-    //     function(err){
-    //       console.log('error retrieving token: ' + err);
-    //     }
-    //   );
+    FCMPlugin.getToken(
+        function(token){
+
+          console.log('token : ' + token);
+
+          AppSettings.deviceToken = token;
+        },
+        function(err){
+          console.log('error retrieving token: ' + err);
+        }
+      );
   });
 
   // FCMPlugin.onNotification(
@@ -271,6 +271,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       'tab-formulario': {
         templateUrl: 'templates/vacaciones.html',
         controller: 'vacacionesController'
+      }
+    }
+  })
+
+  .state('tab.cuenta', {
+    url: '/cuenta',
+    views: {
+      'tab-more': {
+        templateUrl: 'templates/cuenta.html',
+        controller: 'cuentaController'
       }
     }
   })

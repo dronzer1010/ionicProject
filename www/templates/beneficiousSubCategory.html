@@ -1,8 +1,8 @@
 
-<ion-view view-title="beneficiousSubCategory">
-  <ion-nav-title>
+<ion-view view-title="Convenios SubCategory">
+  <!-- <ion-nav-title>
     <img class="headerImgStyle" src="img/logo.png">
-  </ion-nav-title>
+  </ion-nav-title> -->
   <ion-nav-buttons side="left">
     <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
       <i class="icon ion-arrow-left-b"></i>
@@ -14,7 +14,34 @@
     </button>
   </ion-nav-buttons>
   <ion-content>
-    <ion-list >
+    <!-- <div>
+        <img src="img/beneficos.jpg" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
+        <div  style="position: relative;left: 0;width: 100%;top: -29px;left: 12px;">
+          <span  style="color: white;font-size: 15px;letter-spacing: -1px;background: rgb(0, 0, 0);background: rgba(0, 0, 0, 0.3);font-size: 20px;">
+          Convenios</span>
+        </div>
+      </div>
+
+   </div>
+   <div class="formularioDivStyle bottomBorder" style="margin-top: -28px;"></div>
+   <p style="padding-left: 13px;font-weight: bolder;padding: 11px;">I'm not exactly sure how cordova works, but once the licenses are accepted it creates a file. You could create that file manually. It is described on this question, but here's the commands to create the required license file.</p> -->
+    <ion-list  ng-repeat="subCat in subCategories">
+
+      <div class="row" style="padding-top: 21px;margin-top: -11px;" >
+          <div class="imageOverlay" ng-click="goBeneficiousCouponsPage(subCat._id)">
+            <!-- <img ng-src="http://banistmo-backend.herokuapp.com/{{}}" class="coupenImgStyle"> -->
+            <img src="img/adam.jpg" class="firstImageStyle" style="height: 111px;">
+            <div  style="position: absolute;bottom: 10%;left: 0;width: 100%;">
+              <span  style="color: white;padding-left: 10px;font-size: 15px;letter-spacing: -1px;background: rgb(0, 0, 0);background: rgba(0, 0, 0, 0.1);font-size: 20px;">
+              {{subCat.name}}</span>
+            </div>
+          </div>
+
+    </div>
+    </ion-list>
+
+
+    <!-- <ion-list >
       <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" ng-repeat="subCat in subCategories" type="item-text-wrap" ng-click="goBeneficiousCouponsPage(subCat._id)">
         <img src="img/ionic.png" class="imgStyle" >
         <h2 class="beneficioSubMenuHeader" ng-if="!!subCat.name">{{subCat.name}}</h2>
@@ -130,7 +157,7 @@
      </div>
     </div>
   </div>
-    </ion-list>
+    </ion-list> -->
   </ion-content>
 
 </ion-view>

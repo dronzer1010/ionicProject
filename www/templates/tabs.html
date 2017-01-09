@@ -43,17 +43,78 @@ navigation history that also transitions its views in and out.
             <button class="button button-icon icon ion-ios-close-empty" ng-click="modal.hide()" style="color: #00428a;"></button>
         </ion-header-bar>
         <ion-content style="background-color: #ffdd00;">
-          <!-- <div class="row">
-            <div class="col col-33" style="text-align: center;">
-              <i class="icon ion-social-dribbble" style="font-size: 30px;"></i><br/>
+          <div class="row">
+            <div class="col col-33" style="text-align: center;" ng-click="goBeneficiousSubmenu()">
+              <img src="img/icono convenios.png" style="height: 31px;"><br/>
               <span>Convenios</span><br/>
               <hr/ style="border: 1px solid black;">
             </div>
-            <div class="col col-33" style="text-align: center;">Alertas</div>
-            <div class="col col-33" style="text-align: center;">Clima</div>
+            <div class="col col-33" style="text-align: center;">
+              <img src="img/icono alertas.png" style="height: 31px;"><br/>
+              <span>Alertas</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;" ng-click="goContactosPage()">
+              <img src="img/icono directorio.png" style="height: 31px;"><br/>
+              <span>Contactos</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-33" style="text-align: center;" ng-click="goCalendarioPage()">
+              <img src="img/icono calendar.png" style="height: 31px;"><br/>
+              <span>Calendario</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;" ng-click="goFormularioPage()">
+              <img src="img/icono vacaciones.png" style="height: 31px;"><br/>
+              <span>Formularios</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;" ng-click="goCuentaPage()">
+              <img src="img/icono mi cuenta.png" style="height: 31px;"><br/>
+              <span>Cuenta</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-33" style="text-align: center;" ng-click="goFormacionSubMenu()">
+              <img src="img/formacion.png" style="height: 31px;"><br/>
+              <span>Formacion y entrenamiento</span><br/>
+              <!-- Formacion y  -->
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;">
+              <img src="img/icono vacaciones.png" style="height: 31px;"><br/>
+              <span>Vacantes internas</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;" ng-click="goNoticiasPage()">
+              <img src="img/icono noticias.png" style="height: 31px;"><br/>
+              <span>Noticias</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col col-33" style="text-align: center;"ng-click="goContactosPage()">
+              <img src="img/icono directorio.png" style="height: 31px;"><br/>
+              <span>Contactos</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;" ng-click="logout()">
+              <img src="img/icono vacaciones.png" style="height: 31px;"><br/>
+              <span>Logout</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;" >
+              <img src="img/icono vacaciones.png" style="height: 31px;"><br/>
+              <span></span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
           </div> -->
+          <!-- <i class="icon ion-social-dribbble" style="font-size: 30px;"></i><br/> -->
 
-          <ion-list >
+          <!-- <ion-list >
             <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goBeneficiousSubmenu()">
               <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Beneficios</h2>
             </ion-item>
@@ -88,7 +149,7 @@ navigation history that also transitions its views in and out.
             <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="logout()">
               <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Logout </h2>
             </ion-item>
-          </ion-list>
+          </ion-list> -->
 
         </ion-content>
     </ion-modal-view>

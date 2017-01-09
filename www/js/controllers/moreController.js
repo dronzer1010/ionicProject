@@ -39,6 +39,13 @@ $scope.goWeatherPage = function () {
   $scope.modal.hide();
 };
 
+$scope.goCuentaPage = function () {
+  $state.go('tab.cuenta');
+  $scope.modal.hide();
+};
+
+
+
 
 $scope.logout = function () {
   $window.localStorage.clear();
