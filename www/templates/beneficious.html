@@ -18,8 +18,8 @@
 
     <div>
         <img src="img/beneficos.jpg" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
-        <div  style="position: relative;left: 0;width: 100%;top: -42px;background-color: #ffffff;opacity: 0.6;height: 37px;padding: 8px;">
-          <span  style="color: black;font-size: 15px;letter-spacing: -1px;font-size: 20px;">
+        <div class="imageDivStyle">
+          <span class="imageTextStyle">
           Convenios</span>
         </div>
       </div>
@@ -32,7 +32,7 @@
     <div class="row" style="padding-top: 22px;">
             <div class="imageOverlay" ng-click="goBeneficiousSubCategoryPage(cat._id)">
               <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 111px;" ng-hide="!!cat.image">
-              <img ng-src="http://banistmo-backend.herokuapp.com/{{cat.image}}" class="firstImageStyle" style="height: 111px;" ng-show="!!cat.image" >
+              <img ng-src="http://banistmo-backend.herokuapp.com/{{cat.image}}" class="firstImageStyle" style="height: 111px;" ng-show="!!cat.image" onError="this.src='img/beneficos.jpg'">
               <div  style="position: absolute;bottom: 45%;left: 0;width: 100%;text-align: center;">
                 <span  style="color: white;font-size: 25px !important;letter-spacing: -1px;font-weight: bold;">
                   {{cat.category}}
