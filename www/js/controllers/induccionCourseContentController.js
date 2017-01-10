@@ -1,4 +1,4 @@
-angular.module('starter').controller('induccionController', function($scope, $state, $window) {
+angular.module('starter').controller('induccionCourseContentController', function($scope, $state, $window) {
 
   $scope.goBack = function() {
     $window.history.back();
@@ -9,8 +9,7 @@ angular.module('starter').controller('induccionController', function($scope, $st
   };
 
   $scope.goCoursePage = function () {
-    $state.go('tab.induccionCourse');
+    $state.go('tab.induccionCourseDetailPage');
   };
-
 
 });

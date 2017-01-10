@@ -15,7 +15,6 @@
   </ion-nav-buttons>
 
   <ion-content  style="border-bottom: 2px solid #00428a;">
-    <!-- <div ng-repeat="coupensData in coupenDetails"> -->
     <div>
         <div class="coupenHeaderStyle">{{coupenDetails.title}}</div>
         <div>
@@ -23,9 +22,8 @@
             <img ng-src="http://banistmo-backend.herokuapp.com/{{coupenDetails.image}}" class="coupenImgStyle" ng-if="!!coupenDetails.image">
        </div>
    </div>
-   <!-- <div class="formularioDivStyle"></div> -->
     <div style="border-bottom: 2px solid #00428a;color:#00428a;">
-     <p class="formularioParaStyle" >20% de descunto en todos ios platos con precio regular en la APP servicio de entrega gratulta a lass torres afiliadsa constant descuentos y promociones.</p>
+     <p class="formularioParaStyle" style="padding-left: 29px;">20% de descunto en todos ios platos con precio regular en la APP servicio de entrega gratulta a lass torres afiliadsa constant descuentos y promociones.</p>
    </div>
 
    <div style="border-bottom: 2px solid #00428a;color:#00428a;">
@@ -43,43 +41,5 @@
      </div>
   </div>
 </div>
-
-
-
   </ion-content>
-
-  <!-- <ion-content  style="border-bottom: 2px solid #00428a;" >
-
-  <div class="coupenHeaderStyle fontHeaderColor" style="height: 39px;">{{coupenDetails.title}}</div>
-
-  <div class="fontHeaderColor" style="text-align:center;padding-top: 25px;font-size: 15px;font-weight: 600;">This is Title for detail about category.</div>
-  <div style="text-align:center;font-size: 13px;font-weight: 400;">This is Title for detail about category.</div>
-
-    <div>
-    <div class="row" style="padding-top: 0px;">
-      <div class="col col-5"></div>
-      <div class="col col-90">
-        <div class="row">
-        <div class="col col-45">
-          <button class="button button-dark" style="border-radius: 15px;height: 100%;width: 100%;background-color:#00428a;">
-          </button>
-        </div>
-        <div class="col col-10"></div>
-        <div class="col col-45">
-          <img src="img/sample.png" style="height: 100%;width: 100%;">
-        </div>
-      </div>
-      </div>
-      <div class="col col-5">
-      </div>
-    </div>
-
-  </div>
-   <div class="formularioDivStyle" style="margin-top: 0px; height: 28px;"></div>
-
-
-  <h3 style="padding-left: 15px;font-size: 15px;font-weight: 600;color: #00428a;font-size: 15px;">This is for demo project</h3>
-   <div class="formularioParaStyle" style="color: black;">By default, side menus are hidden underneath their side menu content and can be opened by swiping the content left or right or by toggling a button to show the side menu. Additionally, by adding the exposeAsideWhen attribute directive to an ionSideMenu element directive, </div>
-
-  </ion-content> -->
 </ion-view>

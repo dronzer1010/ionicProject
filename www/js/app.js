@@ -156,6 +156,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
+    .state('tab.induccionCourse', {
+        url: '/induccionCourse',
+        views: {
+          'tab-induccion': {
+            templateUrl: 'templates/induccionCourse.html',
+            controller: 'induccionCourseController'
+          }
+        }
+      })
+
+      .state('tab.induccionCourseContent', {
+        url: '/induccionCourseContent',
+        views: {
+          'tab-more': {
+            templateUrl: 'templates/induccionCourseContent.html',
+            controller: 'induccionCourseContentController'
+          }
+        }
+      })
+
+      .state('tab.induccionCourseDinamica', {
+        url: '/induccionCourseDinamica',
+        views: {
+          'tab-more': {
+            templateUrl: 'templates/induccionCourseDinamica.html',
+            controller: 'induccionCourseDinamicaController'
+          }
+        }
+      })
+
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
@@ -186,6 +216,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
+
+
     .state('tab.noticiasPage', {
       url: '/noticiasPage',
       views: {

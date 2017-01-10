@@ -15,4 +15,10 @@ angular.module('starter').controller('formacionSubmenuController', function($sco
   $scope.goInduccionPage = function () {
     $state.go('tab.induccion');
   };
+
+  $scope.goVideoPage = function () {
+    $state.go('tab.formacionVideo');
+  };
+
+
 });

@@ -1,7 +1,7 @@
-<ion-view view-title="Formulario..">
-  <ion-nav-title>
+<ion-view view-title="Formularios">
+  <!-- <ion-nav-title>
     <img class="headerImgStyle" src="img/logo.png">
-  </ion-nav-title>
+  </ion-nav-title> -->
   <ion-nav-buttons side="left">
     <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
       <i class="icon ion-arrow-left-b"></i>
@@ -14,26 +14,34 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="fontHeaderColor">
+
     <div>
+        <img src="img/formularios.png" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
+        <div  style="position: relative;left: 0;width: 100%;top: -42px;background-color: #ffffff;opacity: 0.6;height: 37px;padding: 8px;">
+          <span  style="color: #00428a;font-size: 15px;letter-spacing: -1px;font-size: 20px;">
+          Convenios</span>
+        </div>
+      </div>
+    <!-- <div>
         <div class="coupenHeaderStyle">Formularios y documentos</div>
         <div>
             <img src="img/formularios.jpg" class="coupenImgStyle">
        </div>
-   </div>
-   <div class="formularioDivStyle"></div>
+   </div> -->
+   <div class="formularioDivStyle" style="margin-top: -42px;"></div>
    <ion-list >
-     <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap" ng-click="goVacacionesPage()">
+     <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft"  type="item-text-wrap" ng-click="goVacacionesPage()">
        <img src="img/icono vacaciones.png" class="imgStyle" >
-       <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;">Vacaciones</h2>
+       <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;color:#00428a;">Vacaciones</h2>
      </ion-item>
-     <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
+     <!-- <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
        <img src="img/secondImage.png" class="imgStyle" >
        <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;">Incapacidades</h2>
      </ion-item>
      <ion-item class="item-remove-animate item-avatar item-icon-left categoryleft" type="item-text-wrap">
        <img src="img/smily.png" class="imgStyle" >
        <h2 class="beneficioSubMenuHeader" style="padding-top: 9px;">Licencia Maternal</h2>
-     </ion-item>
+     </ion-item> -->
 
 
    </ion-list>
