@@ -1,15 +1,20 @@
 angular.module('starter').controller('induccionCourseController', function($scope, $state, $window) {
 
   $scope.goBack = function() {
-    $window.history.back();
+      $state.go('tab.induccion');
+    // $window.history.back();
   };
 
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };
 
-  $scope.goCourseContent = function () {
-    $state.go('tab.induccionCourseContent');
+  $scope.goCourseContentVideoList = function () {
+    $state.go('tab.induccionCourseVideoList');
+  };
+
+  $scope.goCourseContentPresentationList = function () {
+    $state.go('tab.induccionCoursePresentationList');
   };
 
   $scope.goCourseDinamica = function () {

@@ -166,11 +166,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       })
 
-      .state('tab.induccionCourseContent', {
-        url: '/induccionCourseContent',
+      .state('tab.induccionCourseVideoList', {
+        url: '/induccionCourseVideoList',
         views: {
           'tab-more': {
-            templateUrl: 'templates/induccionCourseContent.html',
+            templateUrl: 'templates/induccionCourseVideoList.html',
+            controller: 'induccionCourseContentController'
+          }
+        }
+      })
+
+      .state('tab.induccionCoursePresentationList', {
+        url: '/induccionCoursePresentationList',
+        views: {
+          'tab-more': {
+            templateUrl: 'templates/induccionCoursePresentationList.html',
             controller: 'induccionCourseContentController'
           }
         }

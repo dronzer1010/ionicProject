@@ -18,18 +18,18 @@
 
     <div>
         <img src="img/beneficos.jpg" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
-        <div class="imageDivStyle">
+        <div class="imageDivStyle" style="padding: 14px;top: -53px;height: 49px;">
           <span class="imageTextStyle">
           Convenios</span>
         </div>
       </div>
 
 
-   <div class="formularioDivStyle bottomBorder" style="margin-top: -42px;"></div>
+   <div class="formularioDivStyle bottomBorder" style="margin-top: -52px;"></div>
    <!-- <p style="padding-left: 13px;font-weight: bolder;padding: 11px;">La calidate Vida de nuestros es primordial. Como parte del portiafolio en products y servicios, que te permita tener una vida saludable, te invitamos a conocer y disfrutar de los convenios que tenemos para ti. Recuerda qua para obtener todos los beneficios de ios convenios debes presentar carnet de colaborador.</p> -->
     <ion-list ng-repeat="cat in categories">
 
-    <div class="row" style="padding-top: 22px;">
+    <div style="padding-top: 22px;">
             <div class="imageOverlay" ng-click="goBeneficiousSubCategoryPage(cat._id)">
               <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 111px;" ng-hide="!!cat.image">
               <img ng-src="http://banistmo-backend.herokuapp.com/{{cat.image}}" class="firstImageStyle" style="height: 111px;" ng-show="!!cat.image" onError="this.src='img/beneficos.jpg'">
@@ -39,9 +39,10 @@
                 </span>
               </div>
             </div>
-          </div>
+    </div>
 
     </ion-list>
+
 
   </ion-content>
 
