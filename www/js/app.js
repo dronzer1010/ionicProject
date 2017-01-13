@@ -25,17 +25,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    FCMPlugin.getToken(
-        function(token){
-
-          console.log('token : ' + token);
-
-          AppSettings.deviceToken = token;
-        },
-        function(err){
-          console.log('error retrieving token: ' + err);
-        }
-      );
+    // FCMPlugin.getToken(
+    //     function(token){
+    //
+    //       console.log('token : ' + token);
+    //
+    //       AppSettings.deviceToken = token;
+    //     },
+    //     function(err){
+    //       console.log('error retrieving token: ' + err);
+    //     }
+    //   );
   });
 
   // FCMPlugin.onNotification(
@@ -126,7 +126,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   })
 
   .state('tab.beneficiousCoupons', {
-    url: '/beneficiousCoupons/:subCatId',
+    url: '/beneficiousCoupons',
     views: {
       'tab-beneficious': {
         templateUrl: 'templates/beneficiousCoupons.html',
@@ -149,7 +149,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('tab.induccion', {
       url: '/induccion',
       views: {
-        'tab-induccion': {
+        'tab-more': {
           templateUrl: 'templates/induccion.html',
           controller: 'induccionController'
         }
@@ -159,7 +159,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab.induccionCourse', {
         url: '/induccionCourse',
         views: {
-          'tab-induccion': {
+          'tab-more': {
             templateUrl: 'templates/induccionCourse.html',
             controller: 'induccionCourseController'
           }

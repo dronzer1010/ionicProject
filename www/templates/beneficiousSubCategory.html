@@ -1,8 +1,11 @@
 
+
+
+
+
+
 <ion-view view-title="Convenios SubCategory">
-  <!-- <ion-nav-title>
-    <img class="headerImgStyle" src="img/logo.png">
-  </ion-nav-title> -->
+
   <ion-nav-buttons side="left">
     <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
       <i class="icon ion-arrow-left-b"></i>
@@ -17,7 +20,7 @@
 
     <ion-list  ng-repeat="subCat in subCategories">
       <div>
-        <!-- style="padding-top: 21px;margin-top: -11px;" -->
+
           <div class="imageOverlay" ng-click="goBeneficiousCouponsPage(subCat._id)">
             <img ng-src="http://banistmo-backend.herokuapp.com/{{subCat.image}}" class="firstImageStyle" style="height: 145px;" ng-show="!!subCat.image" onError="this.src='img/beneficos.jpg'">
             <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 111px;" ng-hide="!!subCat.image">

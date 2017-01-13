@@ -33,6 +33,10 @@ angular.module('starter').controller('beneficiousController', function($scope, $
     $state.go('tab.beneficiousCoupons');
 
   };
+  // $scope.goBeneficiousCouponsPage= function(catId) {
+  //   $state.go('tab.beneficiousCoupons' ,{ 'catId': catId });
+  //
+  // };
 
 
 $scope.gomenuPage = function () {
