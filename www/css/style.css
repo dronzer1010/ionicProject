@@ -86,7 +86,7 @@
         -webkit-background-size: cover !important;
         -moz-background-size: cover !important;
         background-size: cover !important;
-        top: 44px !important;
+        /*top: 44px !important;*/
     }
     ion-tabs.tabs-color-active-positive .tab-item {
         color: #03468c !important;
@@ -446,6 +446,7 @@
 .colorStyle{
   color: #00428a !important;
 }
+<<<<<<< HEAD
 .tabs .tab-item .icon.vacantes {
   background-repeat: no-repeat;
   background-position: 50%;
@@ -469,4 +470,31 @@
   background-position: 50%;
   background-image: url(../img/convenios.png);
   background-size: contain;
+=======
+.radioLblStyle{
+  width: 60px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.presentationItemStyle{
+  min-height: 65px !important;
+}
+.vdoStyle{
+  padding-left: 15px !important;
+}
+.induccionCoursePara{
+  margin-top: 10px !important;
+}
+
+/*.tabs .tab-item .icon.mcfly {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 100%;
+  background-image: url(../img/icono convenios.png) !important;
+  background-size:contain;
+}*/
+.ion-ios-pulse-strong:before {
+
+  content: url('../img/icono convenios.png') !important;
+>>>>>>> ef987ea06f674c93c41a09cd6915571ae6a95831
 }
