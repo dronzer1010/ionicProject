@@ -62,7 +62,7 @@
 }
 
 .tabs-striped.tabs-positive .tabs {
-    background-color: #ffdd00;
+    background-color: #000f9f;
 }
 /*.ion-tabs.tabs-color-active-positive .tab-item {
     color: #11205f !important;
@@ -123,7 +123,6 @@
   height: 47px;
 }
 .coupenImgStyle{
-  margin-top: -11px;
   width: 100%;
   border-bottom: 1px solid #00428a;
 }
@@ -136,7 +135,7 @@
 .formularioDivStyle{
   background-color: #ffdd00;
   margin-top: -5px;
-  height: 17px;
+  height: 40px;
 }
 .fontHeaderColor{
   color: #00428a !important;
@@ -416,7 +415,7 @@
   position: relative;
   left: 0;
   width: 100%;
-  top: -42px;
+  top: -5px;
   background-color: #ffffff;
   opacity: 0.6;
   height: 37px;
@@ -446,4 +445,28 @@
 }
 .colorStyle{
   color: #00428a !important;
+}
+.tabs .tab-item .icon.vacantes {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../img/Vacantes-job1-flat.png);
+  background-size: contain;
+}
+.tabs .tab-item .icon.noticias {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../img/icono-noticias.png);
+  background-size: contain;
+}
+.tabs .tab-item .icon.calendario {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../img/calendar1-flat.png);
+  background-size: contain;
+}
+.tabs .tab-item .icon.convenios {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../img/convenios.png);
+  background-size: contain;
 }

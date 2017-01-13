@@ -260,7 +260,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab.calendario', {
       url: '/calendario',
       views: {
-        'tab-more': {
+        'tab-calendario': {
           templateUrl: 'templates/calendario.html',
           controller: 'calendarioController'
         }

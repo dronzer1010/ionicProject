@@ -8,13 +8,13 @@ navigation history that also transitions its views in and out.
 
   <!-- Beneficious Tab -->
   <!-- <ion-tab title="Beneficios" icon-off="ion-bookmark" icon-on="ion-bookmark" href="#/tab/beneficious" > -->
-    <ion-tab title="Convenios" icon-off="ion-bookmark" icon-on="ion-bookmark" href="#/tab/beneficious" >
+    <ion-tab title="Convenios" icon-off="convenios" icon-on="convenios" href="#/tab/beneficious" >
 
     <ion-nav-view name="tab-beneficious"></ion-nav-view>
   </ion-tab>
 
   <!-- Induccion Tab -->
-  <ion-tab title="Induccion" icon-off="ion-ios-book" icon-on="ion-ios-book" href="#/tab/induccion">
+  <ion-tab title="Vacantes" icon-on="vacantes" icon-off="vacantes" href="#/tab/induccion">
     <ion-nav-view name="tab-induccion"></ion-nav-view>
   </ion-tab>
 
@@ -23,15 +23,18 @@ navigation history that also transitions its views in and out.
     <ion-nav-view name="tab-more"></ion-nav-view>
   </ion-tab>
 
-  <!-- Formulario Tab -->
-  <ion-tab title="Formulario" icon-off="ion-ios-briefcase" icon-on="ion-ios-briefcase" href="#/tab/formulario" >
-    <ion-nav-view name="tab-formulario"></ion-nav-view>
-  </ion-tab>
-
   <!-- Noticas Tab -->
-  <ion-tab title="Noticias" icon-off="ion-ios-paper" icon-on="ion-ios-paper" href="#/tab/noticas" >
+  <ion-tab title="Noticias" icon-on="noticias" icon-off="noticias" href="#/tab/noticas" >
     <ion-nav-view name="tab-noticas"></ion-nav-view>
   </ion-tab>
+
+  <ion-tab title="Calendario" icon-off="calendario" icon-on="calendario" href="#/tab/calendario" >
+    <ion-nav-view name="tab-calendario"></ion-nav-view>
+  </ion-tab>
+  <!-- Formulario Tab -->
+  <!-- <ion-tab title="Formulario" icon-off="ion-ios-briefcase" icon-on="ion-ios-briefcase" href="#/tab/formulario" >
+    <ion-nav-view name="tab-formulario"></ion-nav-view>
+  </ion-tab> -->
 
 
 </ion-tabs>
@@ -44,11 +47,11 @@ navigation history that also transitions its views in and out.
         </ion-header-bar>
         <ion-content style="background-color: #ffdd00;">
           <div class="row">
-            <div class="col col-33" style="text-align: center;" ng-click="goBeneficiousSubmenu()">
+            <!-- <div class="col col-33" style="text-align: center;" ng-click="goBeneficiousSubmenu()">
               <img src="img/icono convenios.png" style="height: 31px;"><br/>
               <span>Convenios</span><br/>
               <hr/ style="border: 1px solid black;">
-            </div>
+            </div> -->
             <div class="col col-33" style="text-align: center;">
               <img src="img/icono alertas.png" style="height: 31px;"><br/>
               <span>Alertas</span><br/>
@@ -59,41 +62,43 @@ navigation history that also transitions its views in and out.
               <span>Contactos</span><br/>
               <hr/ style="border: 1px solid black;">
             </div>
-          </div>
-          <div class="row">
-            <div class="col col-33" style="text-align: center;" ng-click="goCalendarioPage()">
-              <img src="img/icono calendar.png" style="height: 31px;"><br/>
-              <span>Calendario</span><br/>
-              <hr/ style="border: 1px solid black;">
-            </div>
             <div class="col col-33" style="text-align: center;" ng-click="goFormularioPage()">
-              <img src="img/icono vacaciones.png" style="height: 31px;"><br/>
+              <img src="img/formacion.png" style="height: 31px;"><br/>
               <span>Formularios</span><br/>
               <hr/ style="border: 1px solid black;">
             </div>
+          </div>
+          <div class="row">
+            <!-- <div class="col col-33" style="text-align: center;" ng-click="goCalendarioPage()">
+              <img src="img/icono calendar.png" style="height: 31px;"><br/>
+              <span>Calendario</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div> -->
+
             <div class="col col-33" style="text-align: center;" ng-click="goCuentaPage()">
               <img src="img/icono mi cuenta.png" style="height: 31px;"><br/>
               <span>Cuenta</span><br/>
               <hr/ style="border: 1px solid black;">
             </div>
-          </div>
-          <div class="row">
             <div class="col col-33" style="text-align: center;" ng-click="goFormacionSubMenu()">
               <img src="img/formacion.png" style="height: 31px;"><br/>
               <span>Formacion y entrenamiento</span><br/>
               <!-- Formacion y  -->
               <hr/ style="border: 1px solid black;">
             </div>
-            <div class="col col-33" style="text-align: center;">
+          </div>
+          <div class="row">
+
+            <!-- <div class="col col-33" style="text-align: center;">
               <img src="img/icono vacaciones.png" style="height: 31px;"><br/>
               <span>Vacantes internas</span><br/>
               <hr/ style="border: 1px solid black;">
-            </div>
-            <div class="col col-33" style="text-align: center;" ng-click="goNoticiasPage()">
+            </div> -->
+            <!-- <div class="col col-33" style="text-align: center;" ng-click="goNoticiasPage()">
               <img src="img/icono noticias.png" style="height: 31px;"><br/>
               <span>Noticias</span><br/>
               <hr/ style="border: 1px solid black;">
-            </div>
+            </div> -->
           </div>
 
           <div class="row">
