@@ -63,12 +63,14 @@
   <ion-content>
 
     <div>
-        <img src="img/beneficos.jpg" class="coupenImgStyle bottomBorder imgHeight" style="margin-top: 0px;height: 150px;">
-        <div class="imageDivStyle spanTextStyle" style="top: -41px;">
-          <span class="imageTextStyle">
+        <img src="img/beneficos.jpg" class="coupenImgStyle bottomBorder imgHeight" style="margin-top: 0px;height: 192px;">
+        <div class="imageDivStyle spanTextStyle" style="top: -49px;height: 45px;padding: 13px;">
+          <span class="imageTextStyle" style="color: #00428a;font-weight: 600;
+">
           Convenios</span>
         </div>
       </div>
+      <!-- convenios1 -->
 
       <!-- <div>
 
@@ -83,27 +85,19 @@
         </div> -->
 
 
-   <div class="formularioDivStyle bottomBorder divMargin" style="height: 22px;margin-top: -40px;"></div>
+   <div class="formularioDivStyle bottomBorder divMargin" style="height: 22px;margin-top: -49px;"></div>
     <ion-list ng-repeat="cat in categories">
 
 
 
     <div class="categoryPaddingStyle">
-            <!-- <div class="imageOverlay" ng-click="goBeneficiousSubCategoryPage(cat._id)">
-              <img src="img/beneficos.jpg" class="firstImageStyle categoryImgStyle" ng-hide="!!cat.image" style="margin-top: 0px;">
-              <img ng-src="http://banistmo-backend.herokuapp.com/{{cat.image}}" style="margin-top: 0px;" class="firstImageStyle categoryImgStyle" ng-show="!!cat.image" onError="this.src='img/beneficos.jpg'">
-              <div class="categoryTExtStyle">
-                <span class="categorySpanStyle">
-                  {{cat.category}}
-                </span>
-              </div>
-            </div> -->
 
-            <div class="imageOverlay" ng-click="goBeneficiousCouponsPage()">
-              <img ng-src="http://banistmo-backend.herokuapp.com/{{cat.image}}" class="firstImageStyle" style="height: 145px;margin-top: -1px;" ng-show="!!cat.image" onError="this.src='img/beneficos.jpg'">
-              <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 111px;margin-top: -1px;" ng-hide="!!cat.image">
-              <div  style="position: absolute;bottom: 45%;left: 0;width: 100%;text-align: center;">
-                <span  style="color: white;font-size: 25px !important;letter-spacing: -1px;font-weight: bold;">
+            <div class="imageOverlay" ng-click="goBeneficiousCouponsPage()" style="">
+              <img ng-src="{{cat.image}}" class="firstImageStyle" style="height: 145px;margin-top: -7px;" ng-show="!!cat.image" onError="this.src='img/beneficos.jpg'">
+
+              <img src="img/beneficos.jpg" class="firstImageStyle" style="height: 111px;margin-top: -7px;" ng-hide="!!cat.image">
+              <div  style="position: absolute;bottom: 3%;left: 0;width: 100%;text-align: center; background: rgba(0, 0, 0, 0.4) !important;margin-top: 55%;height: 103%;">
+                <span style="color: white;font-size: 25px !important;letter-spacing: -1px;font-weight: bold;position: relative;top: 60px;">
                   {{cat.category}}
                 </span>
               </div>

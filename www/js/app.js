@@ -247,6 +247,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
+    .state('tab.noticasDetail', {
+      url: '/noticasDetail',
+      views: {
+        'tab-noticas': {
+          templateUrl: 'templates/noticasDetail.html',
+          controller: 'noticiasDetailController'
+        }
+      }
+    })
+
+
+    .state('tab.noticasComment', {
+      url: '/noticasComment',
+      views: {
+        'tab-noticas': {
+          templateUrl: 'templates/noticasComment.html',
+          controller: 'noticiasDetailController'
+        }
+      }
+    })
+
     .state('tab.contactos', {
       url: '/contactos',
       views: {

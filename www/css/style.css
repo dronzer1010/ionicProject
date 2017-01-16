@@ -646,3 +646,13 @@
 .subCatImgMargin{
   margin-top: -5px !important;
 }
+::-webkit-input-placeholder {
+    color:    #999;
+}
+#textarea_2::-webkit-input-placeholder
+{
+  color:    red !important;
+}
+.imgStyleOver{
+    background : rgba(0, 0, 0, 0.7) !important;
+}

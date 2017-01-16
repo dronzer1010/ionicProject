@@ -7,12 +7,17 @@ angular.module('starter').controller('noticasController', function($scope, $stat
     $state.go('tab.more');
   };
 
+  $scope.goDetail = function () {
+    $state.go('tab.noticasDetail');
+  };
+
 
   $scope.$on('$ionicView.enter', function(ev) {
     if (ev.targetScope !== $scope)
       return;
 
     NoticiasService.getAllCirculars().then(function(response) {
+      console.log('noticias response : ' + angular.toJson(response , ' '));
 
       if (response.success = "true") {
         $scope.circulars = response.data;
