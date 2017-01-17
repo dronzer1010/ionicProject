@@ -9,7 +9,7 @@ angular.module('starter').controller('beneficiousController', function($scope, $
       if (response.success = "true") {
         // console.log('yes true');
           $scope.categories = response.data;
-          console.log('$scope.categories : ' +  angular.toJson(response.data, ' ') );
+          // console.log('$scope.categories : ' +  angular.toJson(response.data, ' ') );
       }
     }).catch(function(error) {
         var error = JSON.parse(error);

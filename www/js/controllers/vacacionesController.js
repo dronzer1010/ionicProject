@@ -8,6 +8,7 @@ angular.module('starter').controller('vacacionesController', function($scope, $s
     $state.go('tab.more');
   };
 
+
   $scope.$on('$ionicView.enter', function(ev) {
     if (ev.targetScope !== $scope)
       return;
@@ -26,6 +27,7 @@ angular.module('starter').controller('vacacionesController', function($scope, $s
     });
 
   });
+
 
 
   var userData = Session.getUser();
@@ -62,5 +64,6 @@ angular.module('starter').controller('vacacionesController', function($scope, $s
     });
   };
 
-
+  $scope.user = AuthorizationData.data.userType;
+  console.log('$scope.user : ' + $scope.user);
 });

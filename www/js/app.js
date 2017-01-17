@@ -25,17 +25,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    // FCMPlugin.getToken(
-    //     function(token){
-    //
-    //       console.log('token : ' + token);
-    //
-    //       AppSettings.deviceToken = token;
-    //     },
-    //     function(err){
-    //       console.log('error retrieving token: ' + err);
-    //     }
-    //   );
+    FCMPlugin.getToken(
+        function(token){
+
+          console.log('token : ' + token);
+
+          AppSettings.deviceToken = token;
+        },
+        function(err){
+          console.log('error retrieving token: ' + err);
+        }
+      );
   });
 
   // FCMPlugin.onNotification(

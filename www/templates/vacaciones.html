@@ -14,11 +14,27 @@
     </button>
   </ion-nav-buttons>
   <ion-content scroll-overflow="false">
+    <div ng-if="user !== user">
+      <div style="padding: 17px;">john doe wants to take vacations  starts  January 1st, ends January 5th and back to his position January 7th.</div>
+      <div class="padding">
+          <button style="margin:0;"  class="button button-balanced  button-block">
+              Accept
+          </button>
+      </div>
+
+      <div class="padding">
+          <button style="margin:0;"  class="button button-assertive  button-block">
+              Decline
+          </button>
+      </div>
+    </div>
+
+
+    <div ng-if="user === user">
     <div>
         <div class="coupenHeaderStyle fontHeaderColor">Solicitud de vacaciones</div><br/>
         <div style="PADDING-LEFT: 9px;font-weight: 500;">ESTIMADO JOHN DOE USTED CUENTA CON 22  DIAS DE VACACIONES DISPONIBLES</div>
    </div><br/>
-   <!-- <div class="formularioDivStyle"></div> -->
 
    <form class="list">
      <label class="item item-input item-stacked-label">
@@ -91,6 +107,7 @@
          </div>
 
    </form>
+ </div>
 
   </ion-content>
 </ion-view>

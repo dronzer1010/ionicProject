@@ -17,7 +17,7 @@ angular.module('starter').controller('noticasController', function($scope, $stat
       return;
 
     NoticiasService.getAllCirculars().then(function(response) {
-      console.log('noticias response : ' + angular.toJson(response , ' '));
+      // console.log('noticias response : ' + angular.toJson(response , ' '));
 
       if (response.success = "true") {
         $scope.circulars = response.data;
