@@ -14,6 +14,12 @@ angular.module('starter').controller('calendarioController', function($scope, $s
     $state.go('tab.more');
   };
 
+  $scope.goDetail = function (eventId) {
+    $state.go('tab.calendarioDetail', { 'eventId': eventId });
+  };
+
+
+
   ////for open modal :
   $ionicModal.fromTemplateUrl('templates/modal.html', {
     scope: $scope,
@@ -51,7 +57,7 @@ angular.module('starter').controller('calendarioController', function($scope, $s
       if (response.success = "true") {
         $scope.acceptedEvents = response.data;
         $scope.calendar.eventSource =  createEvents($scope.acceptedEvents);
-      // console.log('event data...  : ' + angular.toJson(response.data));
+      // console.log('event data...  : ' + angular.toJson($scope.acceptedEvents));
       // console.log('events data at modal : ' + angular.toJson(events , ' '));
 
       }
@@ -67,7 +73,7 @@ angular.module('starter').controller('calendarioController', function($scope, $s
 
 // var events = '';
   function createEvents(data) {
-    console.log('yes this function calling....'+ angular.toJson(data));
+    // console.log('yes this function calling....'+ angular.toJson(data));
     var events = [];
     for (var i = 0; i < data.length; i += 1) {
       var startDate = new Date(data[i].startDate);
@@ -83,9 +89,9 @@ angular.module('starter').controller('calendarioController', function($scope, $s
       var eventStartTime = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
       var eventEndTime = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
 
-      console.log('eventStartTime ' + eventStartTime);
-      console.log('eventEndTime : ' + eventEndTime);
-      console.log('description,,,, : ' + description);
+      // console.log('eventStartTime ' + eventStartTime);
+      // console.log('eventEndTime : ' + eventEndTime);
+      // console.log('description,,,, : ' + description);
 
       events.push({
         title: data[i].event,
@@ -148,38 +154,5 @@ $scope.isToday = function() {
   currentCalendarDate.setHours(0, 0, 0, 0);
   return today.getTime() === currentCalendarDate.getTime();
 };
-
-
-
-
-// $scope.openDetailModel = function (detailInfo) {
-//   $scope.selectedDetailInfo = detailInfo;
-//   console.log('detail info data : ' + angular.toJson($scope.selectedDetailInfo));
-//   $scope.requestDetailModal.show();
-//
-// };
-
-//   $scope.$on('$ionicView.enter', function(ev) {
-//     if (ev.targetScope !== $scope)
-//       return;
-//
-//     NoticiasService.getAllCirculars().then(function(response) {
-//
-//       if (response.success = "true") {
-//         $scope.circulars = response.data;
-//
-//       }
-//     }).catch(function(error) {
-//         var error = JSON.parse(error);
-//         IonicPopupService.alert("ERROR!!", error.msg);
-//         console.log('error : ' + angular.toJson(error, ' '));
-//     });
-//
-//   });
-//
-//   $scope.view_pdf = function (url) {
-//     var ref = window.open(url, '_blank', 'location=no');
-// };
-
 
 });

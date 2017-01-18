@@ -1,4 +1,4 @@
-<ion-view view-title="Acompananos al desfile de la..">
+<ion-view view-title="{{detailData[0].title}}">
 
   <ion-nav-buttons side="left">
     <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
@@ -13,7 +13,7 @@
   </ion-nav-buttons>
 
   <ion-content>
-    <div class="card">
+    <div class="card" ng-repeat="data in detailData">
 
         <ion-item class="item-remove-animate item-avatar"  type="item-text-wrap" style="border-bottom: none;">
           <img src="img/iconoBanistmo.jpg" class="imgStyle">
@@ -26,12 +26,12 @@
           </div>
         </ion-item>
         <div style="padding-left: 17px;">Tu participacion es importance</div><br/>
-        <div style="padding-left: 40px;">12.20.1016</div><br/>
+        <div style="padding-left: 40px;">{{data.date | date:'dd/MM/yyyy'}}</div><br/>
         <div>
-          <img src="img/beneficos.jpg" class="coupenImgStyle imgHeight" style="margin-top: 0px;height: 150px;">
+          <img ng-src="{{data.image}}" class="coupenImgStyle imgHeight" style="margin-top: 0px;height: 150px;border-bottom: none;" onError="this.src='img/beneficos.png'">
         </div>
 
-      <p style="padding-left: 12px;">Comenzamos el ano una activeidad propicia paradivertirte y compartir con tos familiares, amigos y companeros el orgullo de nuestro folclore.</p><br/>
+      <p style="padding-left: 12px;padding-top: 12px;">{{data.content}}</p><br/>
       <div class="row">
         <div class="col">Dia: 14 de entro</div>
       </div>

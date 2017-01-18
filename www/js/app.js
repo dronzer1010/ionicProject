@@ -24,7 +24,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
+    
     FCMPlugin.getToken(
         function(token){
 
@@ -248,7 +248,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     })
 
     .state('tab.noticasDetail', {
-      url: '/noticasDetail',
+      url: '/noticasDetail/:noticisaId',
       views: {
         'tab-noticas': {
           templateUrl: 'templates/noticasDetail.html',
@@ -297,6 +297,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
+
+    .state('tab.calendarioDetail', {
+      url: '/calendarioDetail/:eventId',
+      views: {
+        'tab-calendario': {
+          templateUrl: 'templates/calendarioDetail.html',
+          controller: 'calendarioDetailController'
+        }
+      }
+    })
+
+
 
     .state('tab.calendarioCreateEvent', {
       url: '/calendarioCreateEvent/:event_obj',
@@ -347,6 +359,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+
 
 
   .state('tab.noticas', {

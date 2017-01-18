@@ -52,6 +52,7 @@ $scope.logout = function () {
   Session.setUser(null);
   $state.go('login');
   $scope.modal.hide();
+  $scope.accountModal.hide();
 };
 
 ////for openmode :
@@ -72,6 +73,26 @@ $scope.closeModal = function() {
 // Cleanup the modal when we're done with it!
 $scope.$on('$destroy', function() {
   $scope.modal.remove();
+});
+
+// for my account modal
+$ionicModal.fromTemplateUrl('templates/account.html', {
+  scope: $scope,
+  animation: 'slide-in-up'
+}).then(function(accountModal) {
+  console.log('before assign');
+  $scope.accountModal = accountModal;
+});
+$scope.openAccountModal = function() {
+  $scope.accountModal.show();
+};
+$scope.closeAccountModal = function() {
+  $scope.accountModal.hide();
+  $scope.modal.hide();
+};
+// Cleanup the modal when we're done with it!
+$scope.$on('$destroy', function() {
+  $scope.accountModal.remove();
 });
 
 });

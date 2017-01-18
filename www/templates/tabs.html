@@ -52,22 +52,24 @@ navigation history that also transitions its views in and out.
         </ion-header-bar>
         <ion-content style="background-color: #ffdd00;">
           <div class="row">
-            <!-- <div class="col col-33" style="text-align: center;" ng-click="goBeneficiousSubmenu()">
-              <img src="img/icono convenios.png" style="height: 31px;"><br/>
-              <span>Convenios</span><br/>
-              <hr/ style="border: 1px solid black;">
-            </div> -->
+
             <div class="col col-33" style="text-align: center;">
               <img src="img/icono alertas.png" style="height: 31px;"><br/>
               <span>Alertas</span><br/>
               <hr/ style="border: 1px solid black;">
             </div>
 
-            <div class="col col-33" style="text-align: center;" ng-click="goCuentaPage()">
+            <div class="col col-33" style="text-align: center;" ng-click="openAccountModal()">
+              <img src="img/icono mi cuenta.png" style="height: 31px;"><br/>
+              <span>My Account</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+
+            <!-- <div class="col col-33" style="text-align: center;" ng-click="goCuentaPage()">
               <img src="img/icono mi cuenta.png" style="height: 31px;"><br/>
               <span>Cuenta</span><br/>
               <hr/ style="border: 1px solid black;">
-            </div>
+            </div> -->
             <!-- <div class="col col-33" style="text-align: center;" ng-click="goContactosPage()">
               <img src="img/icono directorio.png" style="height: 31px;"><br/>
               <span>Contactos</span><br/>
@@ -148,42 +150,65 @@ navigation history that also transitions its views in and out.
           </div> -->
           <!-- <i class="icon ion-social-dribbble" style="font-size: 30px;"></i><br/> -->
 
-          <!-- <ion-list >
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goBeneficiousSubmenu()">
-              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Beneficios</h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goFormacionSubMenu()">
-              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">  Formacion y entrenamiento</h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goFormularioPage()">
-              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Formularios</h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" >
-              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Vacantes internas </h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goContactosPage()">
-              <h2 style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Contactos </h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goNoticiasPage()">
 
-              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;" >Noticias </h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Alertas </h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goCalendarioPage()">
-              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Calendario </h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="goWeatherPage()">
-              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Clima </h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap">
-              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Cuenta </h2>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right categoryleft" type="item-text-wrap" ng-click="logout()">
-              <h2  style="font-weight: 700;color: #00428a;font-size: 17px;text-align: center;">Logout </h2>
-            </ion-item>
-          </ion-list> -->
+
+        </ion-content>
+    </ion-modal-view>
+</script>
+
+
+
+<!--for my account modal  -->
+<script id="templates/account.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar-positive" align-title="center" style="background-color: white;">
+          <button class="button" ng-click="closeAccountModal()" style="color: #00428a;background-color: white;border: none;font-weight: bold;font-size: 16px;">Close</button>
+            <h1 class="title" style="font-weight: 700;color: #00428a;font-size: 17px;">My Account</h1>
+            <button class="button button-icon icon ion-power" ng-click="logout()" style="color: #00428a;"></button>
+        </ion-header-bar>
+        <ion-content style="background-color: #ffdd00;">
+          <div class="row">
+            <div class="col col-20"></div>
+            <div class="col col-60" style="text-align: center;">
+              <img src="img/ben.png" style="width: 82%;border: 1px solid #00428a;" >
+              <!-- <img ng-src="http://banistmo-backend.herokuapp.com/{{contactosData.image}}" style="width: 100%;border: 1px solid #00428a;" ng-if="!!contactosData.image"> -->
+            </div>
+            <div class="col col-20"></div>
+         </div>
+
+         <div class="list" style="background-color: #ffdd00;">
+
+          <label class="item item-input item-select" style="margin: 10px;border: 1px solid black;color: #00428a;">
+            <div class="input-label">
+              Civility
+            </div>
+            <select>
+              <option>Miss</option>
+              <option>Mrs</option>
+              <option selected>Mr</option>
+            </select>
+          </label>
+          <label class="item item-input" style="margin: 10px;border: 1px solid black;color: #00428a;">
+            <span class="input-label">FirstName</span>
+            <input type="text">
+          </label>
+          <label class="item item-input" style="margin: 10px;border: 1px solid black;">
+            <span class="input-label">LastName</span>
+            <input type="text">
+          </label>
+          <label class="item item-input" style="margin: 10px;border: 1px solid black;">
+            <span class="input-label">Email</span>
+            <input type="text">
+          </label>
+
+          <button class="button button-full button-stable" style="text-align: left;">
+          Change Password
+          </button>
+
+          <button class="button button-full button-stable" style="background-color: lightgrey;">
+          Send
+          </button>
+        </div>
 
         </ion-content>
     </ion-modal-view>
