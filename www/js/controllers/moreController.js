@@ -43,6 +43,10 @@ $scope.goCuentaPage = function () {
   $state.go('tab.cuenta');
   $scope.modal.hide();
 };
+$scope.goReconocimientoPage = function () {
+  $state.go('tab.reconocimiento');
+  $scope.modal.hide();
+};
 
 
 

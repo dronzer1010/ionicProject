@@ -1,0 +1,43 @@
+<ion-view view-title="Reconocimiento">
+  <!-- <ion-nav-title>
+    <img class="headerImgStyle" src="img/logo.png">
+  </ion-nav-title> -->
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+      <i class="icon ion-arrow-left-b"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="fontHeaderColor">
+
+    <div>
+        <img src="img/reconocimiento.png" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
+        <div  style="position: relative;left: 0;width: 100%;top: -42px;background-color: #ffffff;opacity: 0.6;height: 37px;padding: 8px;">
+          <span  style="color: #00428a;font-size: 15px;letter-spacing: -1px;font-size: 20px;">
+          Reconocimiento</span>
+        </div>
+    </div>
+
+   <div class="formularioDivStyle" style="margin-top: -42px;height: 13px;"></div>
+
+   <div>
+     <label class="item item-input">
+       <textarea rows="9" placeholder="Write something then scroll the view while the textarea is focued"></textarea>
+     </label>
+   </div><br/>
+
+   <div>
+        <center>
+          <button class="button button-dark" ng-click="goDetailPage()" style="font-size: 13px; min-height: 1px;width: 36%;background-color: #a2a2a2;border: #a2a2a2;">
+          Nominar
+        </button>
+      </center>
+   </div>
+   </ion-list>
+  </ion-content>
+</ion-view>

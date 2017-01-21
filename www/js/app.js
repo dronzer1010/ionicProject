@@ -24,18 +24,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-    
-    FCMPlugin.getToken(
-        function(token){
 
-          console.log('token : ' + token);
-
-          AppSettings.deviceToken = token;
-        },
-        function(err){
-          console.log('error retrieving token: ' + err);
-        }
-      );
+    // FCMPlugin.getToken(
+    //     function(token){
+    //
+    //       console.log('token : ' + token);
+    //
+    //       AppSettings.deviceToken = token;
+    //     },
+    //     function(err){
+    //       console.log('error retrieving token: ' + err);
+    //     }
+    //   );
   });
 
   // FCMPlugin.onNotification(
@@ -155,6 +155,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
+    .state('tab.nominacionIndividual', {
+        url: '/nominacionIndividual',
+        views: {
+          'tab-more': {
+            templateUrl: 'templates/nominacionIndividual.html',
+            controller: 'nominacionIndividualController'
+          }
+        }
+      })
 
     .state('tab.induccionCourse', {
         url: '/induccionCourse',
@@ -226,6 +235,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
+
 
 
     .state('tab.noticiasPage', {
@@ -340,6 +350,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+
+
   .state('tab.vacaciones', {
     url: '/vacaciones',
     views: {
@@ -360,6 +372,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+  .state('tab.reconocimiento', {
+    url: '/reconocimiento',
+    views: {
+      'tab-more': {
+        templateUrl: 'templates/reconocimiento.html',
+        controller: 'reconocimientoController'
+      }
+    }
+  })
+
+  .state('tab.reconocimientoSubmenu', {
+    url: '/reconocimientoSubmenu',
+    views: {
+      'tab-more': {
+        templateUrl: 'templates/reconocimientoSubmenu.html',
+        controller: 'reconocimientoSubmenuController'
+      }
+    }
+  })
+
+
 
 
   .state('tab.noticas', {
@@ -371,6 +404,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   });
+
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');

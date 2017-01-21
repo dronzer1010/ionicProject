@@ -65,11 +65,6 @@ navigation history that also transitions its views in and out.
               <hr/ style="border: 1px solid black;">
             </div>
 
-            <!-- <div class="col col-33" style="text-align: center;" ng-click="goCuentaPage()">
-              <img src="img/icono mi cuenta.png" style="height: 31px;"><br/>
-              <span>Cuenta</span><br/>
-              <hr/ style="border: 1px solid black;">
-            </div> -->
             <!-- <div class="col col-33" style="text-align: center;" ng-click="goContactosPage()">
               <img src="img/icono directorio.png" style="height: 31px;"><br/>
               <span>Contactos</span><br/>
@@ -99,7 +94,19 @@ navigation history that also transitions its views in and out.
               <!-- Formacion y  -->
               <hr/ style="border: 1px solid black;">
             </div>
+            <div class="col col-33" style="text-align: center;" ng-click="goCuentaPage()">
+              <img src="img/icono mi cuenta.png" style="height: 31px;"><br/><br/>
+              <span>Cuenta</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
+            <div class="col col-33" style="text-align: center;" ng-click="goReconocimientoPage()">
+              <img src="img/badge.png" style="height: 31px;"><br/>
+              <span>Reconocimiento</span><br/>
+              <hr/ style="border: 1px solid black;">
+            </div>
           </div>
+
+
           <div class="row">
 
             <!-- <div class="col col-33" style="text-align: center;">
@@ -201,10 +208,17 @@ navigation history that also transitions its views in and out.
             <input type="text">
           </label>
 
-          <button class="button button-full button-stable" style="text-align: left;">
+          <button class="button button-full button-stable" style="text-align: left;" ng-click="myvalue = myvalue == true ? false : true;">
           Change Password
           </button>
-
+          <label class="item item-input" style="margin: 10px;border: 1px solid black;" ng-show="myvalue" class="hideByDefault">
+            <span class="input-label">Old Password</span>
+            <input type="text" placeholder="Old Password" style="text-align: right;">
+          </label>
+          <label class="item item-input" style="margin: 10px;border: 1px solid black;" ng-show="myvalue" class="hideByDefault">
+            <span class="input-label">Password</span>
+            <input type="text" placeholder="Password" style="text-align: right;">
+          </label>
           <button class="button button-full button-stable" style="background-color: lightgrey;">
           Send
           </button>
