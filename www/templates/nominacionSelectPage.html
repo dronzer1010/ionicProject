@@ -1,0 +1,70 @@
+<ion-view view-title="Nominacion Individual">
+    <!-- <ion-nav-title>
+    <img class="headerImgStyle" src="img/logo.png">
+  </ion-nav-title> -->
+    <ion-nav-buttons side="left">
+        <button class="button back-button buttons button-clear header-item" style="color: #00428a;" ng-click="goBack()">
+            <i class="icon ion-arrow-left-b"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <button class="button back-button buttons button-clear header-item" style="color: #00428a;" ng-click="gomenuPage()">
+            <i class="icon ion-navicon-round"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content style="border-bottom: 2px solid #00428a;">
+      <div>
+        <div style="padding-top: 7%;">
+          <div style="font-size: initial;font-weight: 700;padding: 15px;"> Escoger Categoria</div>
+          <div style="color: #00428a; font-size: initial;font-weight: 700;padding-left: 15px;"  ng-click="goNominacionSelectPage()"> Liderazgo destacable</div>
+
+        </div>
+
+        <div class="row">
+          <div class="col col-5">
+          </div>
+            <div class="col col-90">
+              <div class="directory_wrap">
+                <div class="bar bar-header item-input-inset">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search" ng-model="searchtname">
+                    </label>
+                    <button class="button button-clear">
+                        Cancel
+                    </button>
+                </div>
+                <!-- ng-repeat="item in items | filter: searchtname" -->
+                <ul class="list" data-ng-init="names=[{name:'(seleccionar todos los resultados de)'}, {name : 'ACEVEDO, MIGUEL ANGEL'}, {name : 'ARIAS GONZALEZ, JESUS MIGUEL'}, {name : '  ATHANASIADIS, MIGUEL'}]">
+                    <li class="item item-checkbox"  ng-repeat="x in names | filter: searchtname">
+                        {{ x.name }}
+                        <label class="checkbox">
+                            <input type="checkbox">
+                        </label>
+                    </li>
+
+                </ul>
+            </div>
+          </div>
+          <div class="col col-5">
+
+          </div>
+
+
+        </div>
+        <div>
+             <center>
+               <button class="button button-dark" ng-click="goCompletePage()" style="margin-top: 31px;font-size: 13px; min-height: 1px;width: 36%;background-color: #a2a2a2;border: #a2a2a2;">
+               Envair
+             </button>
+           </center>
+        </div><br/>
+      </div>
+
+
+
+    </ion-content>
+
+</ion-view>

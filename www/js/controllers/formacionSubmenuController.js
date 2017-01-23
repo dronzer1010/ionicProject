@@ -20,5 +20,9 @@ angular.module('starter').controller('formacionSubmenuController', function($sco
     $state.go('tab.formacionVideo');
   };
 
+  $scope.goEntertanmentoPage = function () {
+    $state.go('tab.entertanmento');
+  };
+
 
 });

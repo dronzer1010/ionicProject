@@ -47,6 +47,14 @@ $scope.goReconocimientoPage = function () {
   $state.go('tab.reconocimiento');
   $scope.modal.hide();
 };
+$scope.goGhContigoPage = function () {
+  $state.go('tab.ghContigo');
+  $scope.modal.hide();
+};
+$scope.goDirectoryPage = function () {
+  $state.go('tab.directory');
+  $scope.modal.hide();
+};
 
 
 

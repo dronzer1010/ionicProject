@@ -155,6 +155,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
+    .state('tab.entertanmento', {
+        url: '/entertanmento',
+        views: {
+          'tab-more': {
+            templateUrl: 'templates/entertanmento.html',
+            controller: 'entertanmentoController'
+          }
+        }
+      })
     .state('tab.nominacionIndividual', {
         url: '/nominacionIndividual',
         views: {
@@ -164,6 +173,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           }
         }
       })
+
+      .state('tab.nominacionSelectPage', {
+          url: '/nominacionSelectPage',
+          views: {
+            'tab-more': {
+              templateUrl: 'templates/nominacionSelectPage.html',
+              controller: 'nominacionSelectPageController'
+            }
+          }
+        })
+
+        .state('tab.nominacionCompletePage', {
+            url: '/nominacionCompletePage',
+            views: {
+              'tab-more': {
+                templateUrl: 'templates/nominacionCompletePage.html',
+                controller: 'nominacionCompletePageController'
+              }
+            }
+          })
+
+
+
 
     .state('tab.induccionCourse', {
         url: '/induccionCourse',
@@ -392,6 +424,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+  .state('tab.ghContigo', {
+    url: '/ghContigo',
+    views: {
+      'tab-more': {
+        templateUrl: 'templates/ghContigo.html',
+        controller: 'ghContigoController'
+      }
+    }
+  })
+
+  .state('tab.directory', {
+     url: '/directory',
+     views: {
+       'tab-more': {
+         templateUrl: 'templates/directory.html',
+         controller: 'directoryController'
+       }
+     }
+   })
 
 
 

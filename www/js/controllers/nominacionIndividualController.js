@@ -8,8 +8,8 @@ angular.module('starter').controller('nominacionIndividualController', function(
     $state.go('tab.more');
   };
 
-  $scope.goCoursePage = function () {
-    $state.go('tab.induccionCourse');
+  $scope.goNominacionSelectPage = function () {
+    $state.go('tab.nominacionSelectPage');
   };
 
 

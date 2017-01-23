@@ -155,7 +155,7 @@
   font-weight: 600 !important;
 }
 .bar.bar-stable .title {
-    color: #00428a;
+    color: #00428a !important;
     font-weight: 700;
 }
 .firstImageStyle{

@@ -1,8 +1,8 @@
 angular.module('starter').controller('induccionCourseController', function($scope, $state, $window) {
 
   $scope.goBack = function() {
-      $state.go('tab.induccion');
-    // $window.history.back();
+      // $state.go('tab.induccion');
+    $window.history.back();
   };
 
   $scope.gomenuPage = function () {
