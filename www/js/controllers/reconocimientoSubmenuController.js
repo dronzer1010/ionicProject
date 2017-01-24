@@ -1,7 +1,7 @@
 angular.module('starter').controller('reconocimientoSubmenuController', function($scope, $state, $window) {
 
   $scope.goBack = function() {
-    // $state.go('tab.more');
+    $state.go('tab.reconocimiento');
     $window.history.back();
   };
 

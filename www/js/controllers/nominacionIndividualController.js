@@ -1,7 +1,8 @@
 angular.module('starter').controller('nominacionIndividualController', function($scope, $state, $window) {
 
   $scope.goBack = function() {
-    $window.history.back();
+      $state.go('tab.reconocimientoSubmenu');
+    // $window.history.back();
   };
 
   $scope.gomenuPage = function () {

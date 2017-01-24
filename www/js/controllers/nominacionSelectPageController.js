@@ -1,7 +1,8 @@
 angular.module('starter').controller('nominacionSelectPageController', function($scope, $state, $window) {
 
   $scope.goBack = function() {
-    $window.history.back();
+      $state.go('tab.nominacionIndividual');
+    // $window.history.back();
   };
 
   $scope.gomenuPage = function () {

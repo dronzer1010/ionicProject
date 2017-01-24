@@ -55,6 +55,10 @@ $scope.goDirectoryPage = function () {
   $state.go('tab.directory');
   $scope.modal.hide();
 };
+$scope.goVacantesPage = function () {
+  $state.go('tab.vacantes');
+  $scope.modal.hide();
+};
 
 
 

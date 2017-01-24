@@ -25,17 +25,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    // FCMPlugin.getToken(
-    //     function(token){
-    //
-    //       console.log('token : ' + token);
-    //
-    //       AppSettings.deviceToken = token;
-    //     },
-    //     function(err){
-    //       console.log('error retrieving token: ' + err);
-    //     }
-    //   );
+    FCMPlugin.getToken(
+        function(token){
+
+          console.log('token : ' + token);
+
+          AppSettings.deviceToken = token;
+        },
+        function(err){
+          console.log('error retrieving token: ' + err);
+        }
+      );
   });
 
   // FCMPlugin.onNotification(
@@ -444,6 +444,53 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
      }
    })
 
+   .state('tab.vacantes', {
+      url: '/vacantes',
+      views: {
+        'tab-more': {
+          templateUrl: 'templates/vacantes.html',
+          controller: 'vacantesController'
+        }
+      }
+    })
+
+    .state('tab.vacantesLineamientos', {
+       url: '/vacantesLineamientos',
+       views: {
+         'tab-more': {
+           templateUrl: 'templates/vacantesLineamientos.html',
+           controller: 'vacantesController'
+         }
+       }
+     })
+     .state('tab.vacantesReclutar', {
+        url: '/vacantesReclutar',
+        views: {
+          'tab-more': {
+            templateUrl: 'templates/vacantesReclutar.html',
+            controller: 'vacantesController'
+          }
+        }
+      })
+
+      .state('tab.vacantesSubMenu', {
+         url: '/vacantesSubMenu',
+         views: {
+           'tab-more': {
+             templateUrl: 'templates/vacantesSubMenu.html',
+             controller: 'vacantesSubMenuController'
+           }
+         }
+       })
+       .state('tab.vacantesDetail', {
+          url: '/vacantesDetail',
+          views: {
+            'tab-more': {
+              templateUrl: 'templates/vacantesDetail.html',
+              controller: 'vacantesDetailController'
+            }
+          }
+        })
 
 
   .state('tab.noticas', {
