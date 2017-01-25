@@ -184,6 +184,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           }
         })
 
+        .state('tab.nominacionVotarPage', {
+            url: '/nominacionVotarPage',
+            views: {
+              'tab-more': {
+                templateUrl: 'templates/nominacionVotarPage.html',
+                controller: 'nominacionSelectPageController'
+              }
+            }
+          })
+
+
+
         .state('tab.nominacionCompletePage', {
             url: '/nominacionCompletePage',
             views: {
@@ -194,7 +206,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             }
           })
 
-
+          .state('tab.nominacionVotarCompletePage', {
+              url: '/nominacionVotarCompletePage',
+              views: {
+                'tab-more': {
+                  templateUrl: 'templates/nominacionVotarCompletePage.html',
+                  controller: 'nominacionCompletePageController'
+                }
+              }
+            })
 
 
     .state('tab.induccionCourse', {
@@ -491,6 +511,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             }
           }
         })
+
+        .state('tab.preguntasFrecuentes', {
+           url: '/preguntasFrecuentes',
+           views: {
+             'tab-more': {
+               templateUrl: 'templates/preguntasFrecuentes.html',
+               controller: 'preguntasFrecuentesController'
+             }
+           }
+         })
 
 
   .state('tab.noticas', {

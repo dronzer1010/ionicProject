@@ -9811,3 +9811,17 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+/*customr css edit*/
+
+  @media(max-width:325px){
+  .scroll_content{
+    height:37vh !important;
+  }
+    }
+
+    @media   (min-width:321px) and (max-width:760px){
+    .scroll_content{
+      height:46vh !important;
+    }
+      }

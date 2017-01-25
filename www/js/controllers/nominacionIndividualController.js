@@ -13,5 +13,9 @@ angular.module('starter').controller('nominacionIndividualController', function(
     $state.go('tab.nominacionSelectPage');
   };
 
+  $scope.goNominacionVotarPage = function () {
+    $state.go('tab.nominacionVotarPage');
+  };
+
 
 });

@@ -18,11 +18,42 @@
       <div>
         <div style="padding-top: 7%;">
           <div style="font-size: 12px;font-weight: 700;padding: 20px;"> Escoger Categoria</div>
-          <div style="color: #00428a; font-size: 12px;font-weight: 700;padding: 20px;padding-top: 4px;"  ng-click="goNominacionSelectPage()"> Liderazgo destacable</div>
+          <div style="color: #00428a; font-size: 12px;font-weight: 700;padding-left: 22px;height: 40px;padding-top: 10px;background: mistyrose;"> Liderazgo destacable</div>
 
         </div>
 
-        <div class="row">
+        <div class="list" style="padding-top: 12px;">
+          <div class="item item-input-inset" style="border: none;">
+            <label class="item-input-wrapper">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text">
+            </label>
+          <a class="button button-icon icon ion-ios-close-empty"></a>
+          </div>
+     </div>
+
+     <div>
+       <div class="list" data-ng-init="names=[{name:'(seleccionar todos los resultados de)'}, {name : 'ACEVEDO, MIGUEL ANGEL'}, {name : 'ARIAS GONZALEZ, JESUS MIGUEL'}, {name : '  ATHANASIADIS, MIGUEL'}]">
+           <div class="item item-checkbox"  ng-repeat="x in names | filter: searchtname" style="border: none;font-weight: bolder;">
+               {{ x.name }}
+               <label class="checkbox">
+                   <input type="checkbox">
+               </label>
+           </div>
+       </div>
+     </div>
+
+
+
+     <div style="padding: 10%;">
+       <div style="font-size: 15px;font-weight: 600;padding-bottom: 10px;">Motivo de la nominacion</div>
+       <label class="item item-input">
+         <textarea rows="5" style="border: 1px solid;"></textarea>
+       </label>
+     </div><br/>
+
+
+        <!-- <div class="row">
           <div class="col col-5">
           </div>
             <div class="col col-90">
@@ -36,7 +67,6 @@
                         Cancel
                     </button>
                 </div>
-                <!-- ng-repeat="item in items | filter: searchtname" -->
                 <ul class="list" data-ng-init="names=[{name:'(seleccionar todos los resultados de)'}, {name : 'ACEVEDO, MIGUEL ANGEL'}, {name : 'ARIAS GONZALEZ, JESUS MIGUEL'}, {name : '  ATHANASIADIS, MIGUEL'}]">
                     <li class="item item-checkbox"  ng-repeat="x in names | filter: searchtname">
                         {{ x.name }}
@@ -51,13 +81,11 @@
           <div class="col col-5">
 
           </div>
-
-
-        </div>
-        <div>
+        </div> -->
+        <div style="margin-top: -37px;">
              <center>
-               <button class="button button-dark" ng-click="goCompletePage()" style="margin-top: 31px;font-size: 13px; min-height: 1px;width: 36%;background-color: #a2a2a2;border: #a2a2a2;">
-               Envair
+               <button class="button button-light" ng-click="goCompletePage()" style="margin-top: 31px;color: #00428a;font-size: 18px; min-height: 1px;width: 36%;border: #a2a2a2;">
+               NOMINAR
              </button>
            </center>
         </div><br/>

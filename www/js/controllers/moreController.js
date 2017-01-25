@@ -59,6 +59,10 @@ $scope.goVacantesPage = function () {
   $state.go('tab.vacantes');
   $scope.modal.hide();
 };
+$scope.goPreguntasPage = function () {
+  $state.go('tab.preguntasFrecuentes');
+  $scope.modal.hide();
+};
 
 
 

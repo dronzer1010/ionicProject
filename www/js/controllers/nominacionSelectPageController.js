@@ -14,6 +14,10 @@ angular.module('starter').controller('nominacionSelectPageController', function(
     $state.go('tab.nominacionCompletePage');
   };
 
+  $scope.goNominacionVotarCompletePage = function () {
+    $state.go('tab.nominacionVotarCompletePage');
+  };
+
 
 
 });
