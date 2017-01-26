@@ -8,14 +8,18 @@ angular.module('starter').controller('nominacionIndividualController', function(
   $scope.gomenuPage = function () {
     $state.go('tab.more');
   };
-
-  $scope.goNominacionSelectPage = function () {
-    $state.go('tab.nominacionSelectPage');
+  $scope.goNominacionSelect = function () {
+    $state.go('tab.nominacionIndividualSelect');
   };
 
-  $scope.goNominacionVotarPage = function () {
-    $state.go('tab.nominacionVotarPage');
-  };
+
+  // $scope.goNominacionSelectPage = function () {
+  //   $state.go('tab.nominacionSelectPage');
+  // };
+  //
+  // $scope.goNominacionVotarPage = function () {
+  //   $state.go('tab.nominacionVotarPage');
+  // };
 
 
 });

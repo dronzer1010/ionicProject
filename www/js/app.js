@@ -174,6 +174,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       })
 
+      .state('tab.nominacionIndividualSelect', {
+          url: '/nominacionIndividualSelect',
+          views: {
+            'tab-more': {
+              templateUrl: 'templates/nominacionIndividualSelect.html',
+              controller: 'nominacionIndividualSelectController'
+            }
+          }
+        })
+
       .state('tab.nominacionSelectPage', {
           url: '/nominacionSelectPage',
           views: {
@@ -395,7 +405,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('tab.formulario', {
     url: '/formulario',
     views: {
-      'tab-formulario': {
+      'tab-more': {
         templateUrl: 'templates/formulario.html',
         controller: 'formularioController'
       }
@@ -407,7 +417,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('tab.vacaciones', {
     url: '/vacaciones',
     views: {
-      'tab-formulario': {
+      'tab-more': {
         templateUrl: 'templates/vacaciones.html',
         controller: 'vacacionesController'
       }
@@ -467,7 +477,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
    .state('tab.vacantes', {
       url: '/vacantes',
       views: {
-        'tab-more': {
+        'tab-vacantes': {
           templateUrl: 'templates/vacantes.html',
           controller: 'vacantesController'
         }
@@ -477,7 +487,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab.vacantesLineamientos', {
        url: '/vacantesLineamientos',
        views: {
-         'tab-more': {
+         'tab-vacantes': {
            templateUrl: 'templates/vacantesLineamientos.html',
            controller: 'vacantesController'
          }
@@ -486,7 +496,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
      .state('tab.vacantesReclutar', {
         url: '/vacantesReclutar',
         views: {
-          'tab-more': {
+          'tab-vacantes': {
             templateUrl: 'templates/vacantesReclutar.html',
             controller: 'vacantesController'
           }
@@ -496,7 +506,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       .state('tab.vacantesSubMenu', {
          url: '/vacantesSubMenu',
          views: {
-           'tab-more': {
+           'tab-vacantes': {
              templateUrl: 'templates/vacantesSubMenu.html',
              controller: 'vacantesSubMenuController'
            }
@@ -505,7 +515,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
        .state('tab.vacantesDetail', {
           url: '/vacantesDetail',
           views: {
-            'tab-more': {
+            'tab-vacantes': {
               templateUrl: 'templates/vacantesDetail.html',
               controller: 'vacantesDetailController'
             }

@@ -1,5 +1,7 @@
 /* Empty. Add your own CSS if you like */
 /* Empty. Add your own CSS if you like */
+
+
 .menuTextStyle{
   text-align: center;
   background-color: whitesmoke;
@@ -451,7 +453,7 @@
 .tabs .tab-item .icon.vacantes {
   background-repeat: no-repeat;
   background-position: 50%;
-  background-image: url(../img/Vacantes-job1-flat.png);
+  background-image: url(../img/briefcase.png);
   background-size: contain;
 }
 
@@ -652,4 +654,11 @@
 }
 .btnnomiar{
   margin-top: 263px !important;
+}
+/* for test css : */
+.preguntasItemStyle{
+  background-color: #1f497d !important;
+  color: white !important;
+  height: 38px !important;
+  padding-top: 8px !important;
 }
