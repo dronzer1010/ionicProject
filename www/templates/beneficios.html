@@ -1,0 +1,91 @@
+<ion-view view-title="Beneficios">
+  <!-- <ion-nav-title>
+    <img class="headerImgStyle" src="img/logo.png">
+  </ion-nav-title> -->
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="goBack()">
+      <i class="icon ion-arrow-left-b"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button back-button buttons button-clear header-item"  style="color: #00428a;" ng-click="gomenuPage()">
+      <i class="icon ion-navicon-round"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="fontHeaderColor">
+
+    <!-- <div>
+        <img src="img/beneficios-crop.jpg" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
+        <div  style="position: relative;left: 0;width: 100%;top: -42px;background-color: #ffffff;opacity: 0.6;height: 37px;padding: 8px;">
+          <span  style="color: #00428a;font-size: 15px;letter-spacing: -1px;font-size: 20px;">
+          Beneficios</span>
+        </div>
+    </div> -->
+
+    <div>
+        <img src="img/beneficios-crop.jpg" class="coupenImgStyle bottomBorder" style="height: 245px !important;">
+        <div  style="position: relative;left: 0;width: 100%;top: -42px;background-color: #ffffff;opacity: 0.6;height: 37px;padding: 8px;">
+          <span  style="color: #00428a;font-size: 15px;letter-spacing: -1px;font-size: 20px;font-weight: 600;">
+          Beneficios</span>
+        </div>
+      </div>
+
+    <p style="color:black;padding-left: 16px;padding-right: 16px;margin-top: -18px;">Para nosotros es de vital importancia el bienestar continuo de nuestros colaboradores y sus seres queridos. Nuestro programa de beneficios contribuye a tu calidad de vida y permite que planifiques tu futuro y el de tu familia.  ¡Te invitamos a revisarlos!
+    </p>
+
+    <!-- this is for only one content show or hide -->
+    <div>
+      <div class="form-group" ng-click="showOne()" style="background-color: #1f497d;color: white;height: 38px;padding-top: 8px;padding-left: 6%;">
+        Sección de Seguro de vida y salud
+        <i class="icon ion-plus-round" style="float: right;padding-right: 5%;" ng-show="show1===false"></i>
+        <i class="icon ion-minus-round" style="float: right;padding-right: 5%;" ng-show="show1===true"></i>
+    </div>
+    <div class="form-group" ng-show="show1" style="color:black;">
+       <p class="text-wrap" style="padding: 12px;padding-top: 0px;">Banistmo y subsidiaria, provee una póliza de vida y salud cubierta al 100% para todos los colaboradores permanentes. En el plan de salud, se puede vincular a los dependientes del colaborador (cónyuge e hijos) en donde el colaborador solo debe cubrir un 20% del costo. El plan médico incluye beneficio dental,  beneficio óptico, hospitalización, visitas a médicos generalistas, especialistas y sub-especialistas, entre otros.</p>
+       <p style="padding: 12px;padding-top: 0px;">Te exhortamos a consultar los detalles de este beneficio: Plan de Seguro Médico</p>
+       <div class="row">
+         <!-- <div class="col col-100"> -->
+           <div class="col col-100" style="text-align: center;" ng-click="goGhContigoPage()">
+             <div>
+             <img src="img/iconoghcontigo1.png" style="height: 31px;"><br/>
+             <div class="content-title" style="height:40px;color:#000f9f;"><span>GH Contigo</span></div>
+             <hr/ style="border: 1px solid #000f9f;">
+           </div>
+           </div>
+         <!-- </div> -->
+       </div>
+    </div>
+
+  </div><br/>
+
+  <div>
+    <div class="form-group" ng-click="showTwo()" style="background-color: #1f497d;color: white;height: 38px;padding-top: 8px;padding-left: 6%;">
+      Click me for Show/Hide
+      <i class="icon ion-plus-round" style="float: right;padding-right: 5%;" ng-show="show2===false"></i>
+      <i class="icon ion-minus-round" style="float: right;padding-right: 5%;" ng-show="show2===true"></i>
+  </div>
+  <div class="form-group" ng-show="show2">
+     <p>I am showing2</p>
+  </div>
+</div><br/>
+
+
+    <!-- <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable"  ng-click="toggleGroup(group)"
+          style="background-color: #1f497d;color: white;height: 38px;padding-top: 8px;"
+                    ng-class="{active: isGroupShown(group)}">
+                    style="background-color: #1f497d;color: white;height: 38px;padding-top: 8px;"
+             {{group.name}}&nbsp;
+            <i class="icon" style="float: right;" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+          </ion-item><br/>
+          <div class="item-accordion" ng-repeat="item in group.items" ng-show="isGroupShown(group)" style="color:black;">
+            <p style="padding: 12px;font-weight: 700;">{{item.que}}</p>
+            <p class="text-wrap" style="padding: 12px;padding-top: 0px;">{{item.ans}}</p>
+          </div>
+        </div>
+      </ion-list> -->
+
+</ion-content>
+</ion-view>

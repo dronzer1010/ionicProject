@@ -532,6 +532,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
            }
          })
 
+         .state('tab.Segmentostaffadd', {
+            url: '/Segmentostaffadd',
+            views: {
+              'tab-more': {
+                templateUrl: 'templates/segmentostaffadd.html',
+                controller: 'SegmentostaffaddController'
+              }
+            }
+          })
+
+          .state('tab.Calendariode', {
+             url: '/Calendariode',
+             views: {
+               'tab-more': {
+                 templateUrl: 'templates/calendariode.html',
+                 controller: 'CalendariodeController'
+               }
+             }
+           })
+
+           .state('tab.Beneficios', {
+              url: '/Beneficios',
+              views: {
+                'tab-more': {
+                  templateUrl: 'templates/beneficios.html',
+                  controller: 'BeneficiosController'
+                }
+              }
+            })
+
+
 
   .state('tab.noticas', {
     url: '/noticas',

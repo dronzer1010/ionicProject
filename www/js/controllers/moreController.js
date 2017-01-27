@@ -63,6 +63,18 @@ $scope.goPreguntasPage = function () {
   $state.go('tab.preguntasFrecuentes');
   $scope.modal.hide();
 };
+$scope.goSegmentostaffaddPage = function () {
+  $state.go('tab.Segmentostaffadd');
+  $scope.modal.hide();
+};
+$scope.goCalendariodePage = function () {
+  $state.go('tab.Calendariode');
+  $scope.modal.hide();
+};
+$scope.goBeneficiosPage = function () {
+  $state.go('tab.Beneficios');
+  $scope.modal.hide();
+};
 
 
 
