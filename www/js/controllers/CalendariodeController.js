@@ -1,5 +1,222 @@
 angular.module('starter').controller('CalendariodeController', function($scope, $state, $window) {
 
+  $scope.show1=false;
+  $scope.show2=false;
+  $scope.show3=false;
+  $scope.show4=false;
+  $scope.show5=false;
+  $scope.show6=false;
+  $scope.show7=false;
+  $scope.show8=false;
+  $scope.show9=false;
+  $scope.show10=false;
+  $scope.show11=false;
+  $scope.show12=false;
+  $scope.showOne = function () {
+    // $scope.show1=true;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show1 = $scope.show1 ? false : true;
+
+  };
+  $scope.showTwo = function () {
+    $scope.show1=false;
+    // $scope.show2=true;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show2 = $scope.show2 ? false : true;
+
+  };
+
+  $scope.showThree = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    // $scope.show3=true;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show3 = $scope.show3 ? false : true;
+
+  };
+
+  $scope.showFour = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    // $scope.show4=true;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show4 = $scope.show4 ? false : true;
+
+  };
+  $scope.showFive = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    // $scope.show5=true;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show5 = $scope.show5 ? false : true;
+
+  };
+
+  $scope.showSix = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    // $scope.show6=true;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show6 = $scope.show6 ? false : true;
+
+  };
+  $scope.showSeven = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    // $scope.show7=true;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show7 = $scope.show7 ? false : true;
+
+  };
+
+  $scope.showEight = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    // $scope.show8=true;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show8 = $scope.show8 ? false : true;
+
+  };
+
+  $scope.showNine = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    // $scope.show9=true;
+    $scope.show10=false;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show9 = $scope.show9 ? false : true;
+
+  };
+
+  $scope.showTen = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    // $scope.show10=true;
+    $scope.show11=false;
+    $scope.show12=false;
+    $scope.show10 = $scope.show10 ? false : true;
+
+  };
+
+  $scope.showEleven = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    // $scope.show11=true;
+    $scope.show12=false;
+    $scope.show11 = $scope.show11 ? false : true;
+
+  };
+
+  $scope.showTwelve = function () {
+    $scope.show1=false;
+    $scope.show2=false;
+    $scope.show3=false;
+    $scope.show4=false;
+    $scope.show5=false;
+    $scope.show6=false;
+    $scope.show7=false;
+    $scope.show8=false;
+    $scope.show9=false;
+    $scope.show10=false;
+    $scope.show11=false;
+    // $scope.show12=true;
+    $scope.show12 = $scope.show12 ? false : true;
+
+  };
+
+
+
+
+
   $scope.goBack = function() {
     $state.go('tab.more');
     // $window.history.back();
