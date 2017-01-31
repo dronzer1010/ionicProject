@@ -25,17 +25,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
-    FCMPlugin.getToken(
-        function(token){
-
-          console.log('token : ' + token);
-
-          AppSettings.deviceToken = token;
-        },
-        function(err){
-          console.log('error retrieving token: ' + err);
-        }
-      );
+    // FCMPlugin.getToken(
+    //     function(token){
+    //
+    //       console.log('token : ' + token);
+    //
+    //       AppSettings.deviceToken = token;
+    //     },
+    //     function(err){
+    //       console.log('error retrieving token: ' + err);
+    //     }
+    //   );
   });
 
   // FCMPlugin.onNotification(
@@ -58,21 +58,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   //     }
   //   );
 
-  //for rootscope :
-  $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam) {
-    // console.log('tostate : ' + angular.toJson(toState, ' '));
-    // console.log('Session.isLoggedIn() : ' + Session.isLoggedIn());
-    if (Session.isLoggedIn() === false) {
-      $location.path('/tab/login');
-      // $state.go('tab.more');
-      // event.preventDefault();
-      return;
-    }else {
-      // $state.go('tab.beneficious');
-      $location.path('/tab/more');
-      console.log('login true called');
-    }
-  });
+  if (Session.isLoggedIn() === false) {
+    $location.path('/tab/login');
+    // $state.go('tab.more');
+    // event.preventDefault();
+    return;
+  }else {
+    // $state.go('tab.beneficious');
+    $location.path('/tab/more');
+    console.log('login true called');
+  }
+
+  //for rootscope this is coment to solve issue of clicking:
+  // $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam) {
+  //   // console.log('tostate : ' + angular.toJson(toState, ' '));
+  //   // console.log('Session.isLoggedIn() : ' + Session.isLoggedIn());
+  //   if (Session.isLoggedIn() === false) {
+  //     $location.path('/tab/login');
+  //     // $state.go('tab.more');
+  //     // event.preventDefault();
+  //     return;
+  //   }else {
+  //     // $state.go('tab.beneficious');
+  //     $location.path('/tab/more');
+  //     console.log('login true called');
+  //   }
+  // });
 
 
 })

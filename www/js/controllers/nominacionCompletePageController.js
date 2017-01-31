@@ -2,7 +2,8 @@ angular.module('starter').controller('nominacionCompletePageController', functio
 
   $scope.goBack = function() {
       // $state.go('tab.nominacionSelectPage');
-    $window.history.back();
+      $state.go('tab.more');
+    // $window.history.back();
   };
 
   $scope.gomenuPage = function () {
